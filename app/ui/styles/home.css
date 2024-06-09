@@ -1,0 +1,545 @@
+/* Hero Section */
+.hero-section .for-startup_and_more p .detail {
+  @apply text-white bg-neutral-800 border border-solid border-[#333];
+}
+
+@media (max-width: 950px) {
+  .hero-section .for-startup_and_more p .detail {
+    @apply bg-[inherit] text-base p-0 border-[inherit];
+  }
+}
+
+/* Our Services Section*/
+main .our-services .heading {
+  background: url("/assets/images/home-page/bg-our-service.webp") no-repeat
+    center center/cover;
+}
+main .our-services .content {
+  @apply grid items-start grid-cols-[repeat(3,1fr)];
+}
+main .our-services .content .service {
+  @apply grid grid-rows-[repeat(2,1fr)] h-[35rem] pb-4 p-8;
+  align-items: end;
+}
+main .our-services .content .service:not(:last-child) {
+  @apply border-r-border border-r border-solid;
+}
+main .our-services .content .service .container-service {
+  @apply justify-self-start flex flex-col items-start gap-4;
+  align-self: start;
+}
+main .our-services .content .service .container-service .icon-and-title {
+  @apply flex flex-col items-start gap-4;
+}
+main .our-services .content .service .container-service .service-icon {
+  @apply border p-[0.8rem] rounded-lg border-b-[none] border-[solid];
+  background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
+}
+main .our-services .content .service .container-service .service-icon img {
+  @apply w-10;
+}
+main .our-services .content .service .button {
+  @apply inline-flex justify-center items-center w-full;
+}
+main .our-services .content .service .button a {
+  @apply border text-white transition-all duration-[0.3s] ease-[ease-in-out] w-full text-center border-[solid] hover:border hover:border-[solid] bg-background;
+}
+@media (max-width: 1250px) {
+  main .our-services .content .service {
+    @apply h-[35rem];
+  }
+}
+@media (max-width: 1110px) {
+  main .our-services .content .service {
+    @apply h-[36.5rem];
+  }
+}
+@media (max-width: 950px) {
+  main .our-services .content .service {
+    @apply h-[38rem] p-4;
+  }
+}
+@media (max-width: 800px) {
+  main .our-services .content {
+    @apply grid-cols-[repeat(1,1fr)];
+  }
+  main .our-services .content .service {
+    @apply h-80;
+  }
+  main .our-services .content .service:not(:last-child) {
+    @apply border-r-[unset] border-b-[#292929] border-b border-solid;
+  }
+  main .our-services .content .service .container-service .icon-and-title {
+    @apply items-center gap-[1.4rem] flex-row;
+  }
+}
+@media (max-width: 600px) {
+  main .our-services .content .service {
+    @apply h-[23rem];
+  }
+}
+@media (max-width: 470px) {
+  main .our-services .content .service {
+    @apply h-[25rem];
+  }
+}
+@media (max-width: 420px) {
+  main .our-services .content .service {
+    @apply h-[28rem];
+  }
+}
+@media (max-width: 360px) {
+  main .our-services .content .service {
+    @apply h-[30rem];
+  }
+}
+main .why-us .heading {
+  background: url("/assets/images/home-page/bg-why-us.webp") no-repeat center
+    center/cover;
+}
+main .why-us .content .container {
+  @apply grid grid-cols-[repeat(2,1fr)];
+}
+main .why-us .content .container:not(:last-child) {
+  @apply border-b-[#292929] border-b border-solid;
+}
+main .why-us .content .container .container-why {
+  @apply flex flex-col items-start gap-8 p-8;
+}
+main .why-us .content .container .container-why:not(:last-child) {
+  @apply border-r-[#292929] border-r border-solid;
+}
+.why-us .content .container .container-why .icon-and-title {
+  @apply flex items-center gap-4;
+}
+.why-us .content .container .container-why .icon-and-title .service-icon {
+  @apply border p-[0.8rem] rounded-lg border-b-[none] border-[solid];
+  background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
+}
+.why-us .content .container .container-why .icon-and-title .service-icon i {
+  @apply w-10 text-[2.5rem] text-[#A21ADE];
+}
+@media (max-width: 900px) {
+  main .why-us .content .container .container-why {
+    @apply p-4;
+  }
+}
+@media (max-width: 800px) {
+  main .why-us .content .container {
+    @apply flex flex-col border-[unset];
+  }
+  main .why-us .content .container .container-why {
+    @apply py-8;
+  }
+  main .why-us .content .container .container-why:not(:last-child) {
+    @apply border-r-[unset] border-b-[#292929] border-b border-solid;
+  }
+}
+main .testimonies .heading {
+  background: url("/assets/images/home-page/bg-testimonies.webp") no-repeat
+    center center/cover;
+}
+main .testimonies .content .container {
+  @apply grid grid-cols-[repeat(2,1fr)];
+}
+main .testimonies .content .container:not(:last-child) {
+  @apply border-b-[#292929] border-b border-solid;
+}
+main .testimonies .content .container .container-testimonies {
+  @apply flex flex-col items-start gap-8 px-8 py-14;
+}
+main .testimonies .content .container .container-testimonies:not(:last-child) {
+  @apply border-r-[#292929] border-r border-solid;
+}
+main .testimonies .content .container .container-testimonies h3 {
+  @apply text-[#D89AFF];
+}
+main
+  .testimonies
+  .content
+  .container
+  .container-testimonies
+  .container-info-client {
+  @apply flex items-center gap-[0.7rem] border border-neutral-800 w-full p-5 rounded-lg border-solid;
+  background: rgba(36, 36, 36, 0.2);
+}
+main
+  .testimonies
+  .content
+  .container
+  .container-testimonies
+  .container-info-client
+  .image-client {
+  @apply w-[70px] h-[70px] flex items-center justify-center rounded-lg;
+  background: linear-gradient(0deg, #bf99d7 0%, #bf99d7 100%);
+}
+main
+  .testimonies
+  .content
+  .container
+  .container-testimonies
+  .container-info-client
+  .image-client
+  img {
+  @apply rounded-lg;
+}
+main
+  .testimonies
+  .content
+  .container
+  .container-testimonies
+  .container-info-client
+  .identite-client
+  .name
+  span {
+  @apply text-white text-[1.2rem] font-medium;
+}
+main
+  .testimonies
+  .content
+  .container
+  .container-testimonies
+  .container-info-client
+  .identite-client
+  .post
+  span {
+  @apply font-normal text-base;
+}
+@media (max-width: 900px) {
+  main .testimonies .content .container .container-testimonies {
+    @apply p-4;
+  }
+}
+@media (max-width: 800px) {
+  main .testimonies .content .container {
+    @apply flex flex-col border-[unset];
+  }
+  main .testimonies .content .container .container-testimonies {
+    @apply py-8;
+  }
+  main
+    .testimonies
+    .content
+    .container
+    .container-testimonies:not(:last-child) {
+    @apply border-r-[unset] border-b-[#292929] border-b border-solid;
+  }
+}
+main .faq .heading {
+  background: url("/assets/images/home-page/bg-faq.webp") no-repeat center
+    center/cover;
+}
+main .faq .content {
+  @apply grid grid-cols-[repeat(2,1fr)];
+}
+main .faq .content .faq-container {
+  @apply flex flex-col items-start;
+}
+main .faq .content .faq-container:not(:last-child) {
+  @apply border-r-[#292929] border-r border-solid;
+}
+main .faq .content .faq-container .faq {
+  @apply flex items-start justify-between gap-8 px-8 py-12;
+}
+main .faq .content .faq-container .faq:not(:last-child) {
+  @apply border-b-[#292929] border-b border-solid;
+}
+main .faq .content .faq-container .faq .num-faq {
+  @apply border p-[0.8rem] rounded-lg border-b-[none] border-[solid];
+  background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
+}
+main .faq .content .faq-container .faq .num-faq span {
+  @apply text-[2rem] font-medium transition-all duration-[0.3s] ease-[ease-in-out];
+}
+main .faq .content .faq-container .open-answer .num-faq span {
+  @apply text-[#BF99D7];
+}
+main .faq .content .faq-container .faq .question-content {
+  @apply flex flex-col gap-8;
+}
+main .faq .content .faq-container .faq .question-content .question-box {
+  @apply flex items-center gap-4 cursor-pointer;
+}
+main
+  .faq
+  .content
+  .faq-container
+  .faq
+  .question-content
+  .question-box
+  .faq-title
+  span {
+  @apply text-[1.8rem] font-normal;
+}
+main
+  .faq
+  .content
+  .faq-container
+  .faq
+  .question-content
+  .question-box
+  .icon-open-answer {
+  @apply transition-all duration-[0.3s] ease-[ease-in-out];
+}
+main
+  .faq
+  .content
+  .faq-container
+  .faq
+  .question-content
+  .question-box
+  .icon-open-answer
+  i {
+  @apply text-[2rem] transition-all duration-[0.3s] ease-[ease-in-out];
+}
+main
+  .faq
+  .content
+  .faq-container
+  .open-answer
+  .question-content
+  .question-box
+  .icon-open-answer {
+  @apply rotate-45;
+}
+main
+  .faq
+  .content
+  .faq-container
+  .open-answer
+  .question-content
+  .question-box
+  .icon-open-answer
+  i {
+  @apply text-[#BF99D7];
+}
+main .faq .content .faq-container .faq .question-content .answer {
+  @apply hidden animate-[fadeInDown];
+  animation-duration: 0.5s;
+}
+main .faq .content .faq-container .open-answer .question-content .answer {
+  @apply block;
+}
+main .faq .contact-faq {
+  @apply flex justify-center;
+}
+main .faq .contact-faq a {
+  @apply transition-all duration-[0.3s] ease-[ease-in-out] hover:border-[#A21ADE];
+  background: #a21ade;
+}
+main .faq .contact-faq a:hover {
+  background: transparent;
+}
+@media (max-width: 925px) {
+  main .faq .content .faq-container .faq {
+    @apply gap-6 px-4 py-10;
+  }
+}
+@media (max-width: 800px) {
+  main .faq .content {
+    @apply grid-cols-[1fr];
+  }
+  main .faq .content .faq-container {
+    @apply items-center border-[unset];
+  }
+  main .faq .content .faq-container .faq {
+    @apply w-full gap-4 justify-between px-4 py-8 border-b-[#292929] border-[unset] border-b border-solid;
+  }
+}
+@media (max-width: 640px) {
+  main .faq .content .faq-container .faq {
+    @apply px-2 py-8;
+  }
+  main .faq .content .faq-container .faq .num-faq span {
+    @apply text-2xl;
+  }
+}
+@media (max-width: 450px) {
+  main
+    .faq
+    .content
+    .faq-container
+    .faq
+    .question-content
+    .question-box
+    .faq-title
+    span {
+    @apply text-[1.3rem];
+  }
+}
+main .start_project .heading {
+  background: url("/assets/images/home-page/bg-contact.webp") no-repeat center
+    center/cover;
+}
+main .start_project .heading .logo-box .logo {
+  @apply flex items-center justify-center gap-[5px] px-0 py-8;
+}
+main .start_project .heading .logo-box .logo i {
+  @apply text-[2rem];
+}
+main .start_project .heading .logo-box .logo span {
+  @apply font-[bold] text-2xl;
+}
+main .start_project .heading .cta-start-project {
+  @apply mt-8;
+}
+main .start_project .heading .cta-start-project a {
+  @apply transition-all duration-[0.3s] ease-[ease-in-out] hover:border-[#A21ADE];
+  background: #a21ade;
+}
+main .start_project .heading .cta-start-project a:hover {
+  background: transparent;
+}
+main .start_project .content {
+  @apply flex-col justify-center items-center flex px-8 py-0 border-t-[solid] border-t;
+}
+main .start_project .content form {
+  @apply w-[70%] border flex-col justify-center gap-10 flex px-8 py-20 border-[solid];
+}
+main .start_project .content form .name_email-box {
+  @apply justify-between items-start gap-8 inline-flex;
+}
+main .start_project .content form .name_email-box .name-input,
+main .start_project .content form .name_email-box .email-input,
+main .start_project .content form .why_contacting_us,
+main .start_project .content form .ur_budget,
+main .start_project .content form .message {
+  @apply flex-1 border px-4 py-[1.2rem] rounded-lg border-[solid];
+  background: rgba(36, 36, 36, 0.5);
+}
+main .start_project .content form .name_email-box .name-input,
+main .start_project .content form .name_email-box .email-input {
+  @apply flex-col justify-center items-start gap-5 inline-flex;
+}
+form label {
+  @apply text-white text-[22px] font-medium leading-[33px];
+  word-wrap: break-word;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  @apply text-white text-[22px] w-full resize-y px-[0.3rem] py-[0.8rem] border-b-[#292929] border-[none] border-b border-solid;
+  background: none;
+  outline: none;
+}
+form .title:not(label.title) {
+  @apply text-2xl font-semibold text-white;
+}
+form input::placeholder,
+form textarea::placeholder {
+  @apply text-[#656567] text-lg font-normal leading-[27px];
+  word-wrap: break-word;
+}
+form .why_contacting_us .why .devs,
+form .why_contacting_us .why .colab_or_other {
+  @apply flex flex-col gap-4;
+}
+form .why_contacting_us .dev_web-input,
+form .why_contacting_us .dev_mob_and_desk,
+form .why_contacting_us .colab,
+form .why_contacting_us .other {
+  @apply flex items-center gap-4;
+}
+form .why_contacting_us .why,
+form .ur_budget .min_max {
+  @apply flex gap-8 mt-8;
+}
+
+/* Style général des checkbox */
+input[type="checkbox"] {
+  @apply relative w-7 h-7 rounded border appearance-none p-1 border-[solid] checked:before:content-["\EB7B"] checked:before:absolute checked:before:-translate-x-2/4 checked:before:-translate-y-2/4 checked:before:text-[#B97AE0] checked:before:left-2/4 checked:before:top-2/4;
+  background: #262626;
+  -webkit-appearance: none;
+}
+input[type="checkbox"]:checked::before {
+  /* Code Unicode de l'icône check-line de remixicon */
+  font-family: "RemixIcon";
+}
+form .submit {
+  @apply w-full self-center flex items-center justify-center;
+}
+form input[type="submit"] {
+  @apply w-6/12 transition-all duration-[0.3s] ease-[ease-in-out] hover:border-[#A21ADE] disabled:cursor-not-allowed disabled:hover:border disabled:hover:border-[rgba(126,26,222,0.3)] disabled:hover:border-solid;
+  background: #a21ade;
+}
+form input[type="submit"]:hover {
+  background: unset;
+}
+form input[type="submit"]:disabled {
+  background: rgba(126, 26, 222, 0.3);
+}
+main .start_project .content .form-send {
+  @apply text-center px-8 py-14;
+}
+main .start_project .content .form-send .true,
+main .start_project .content .form-send .false {
+  @apply text-[1.2rem] hidden p-8 rounded-[5px];
+}
+main .start_project .content .form-send .true {
+  background: #198754;
+}
+main .start_project .content .form-send .false {
+  background: #02caf0;
+}
+main .start_project .content .form-send .true p {
+  @apply text-white;
+}
+main .start_project .content .form-send .false p {
+  @apply text-black;
+}
+main .start_project .content .form-send .true i {
+  @apply text-[2rem] text-[#ffc107];
+}
+main .start_project .content .form-send .false i {
+  @apply text-[2rem] text-[#dc3545];
+}
+@media (max-width: 1110px) {
+  main .start_project .content form {
+    @apply w-4/5;
+  }
+}
+@media (max-width: 920px) {
+  main .start_project .content form {
+    @apply w-[90%] px-4 py-12;
+  }
+}
+@media (max-width: 800px) {
+  main .start_project .content form {
+    @apply w-full border-[unset];
+  }
+  main .start_project .content form .name_email-box {
+    @apply flex-col w-full;
+  }
+  main .start_project .content form .name_email-box * {
+    @apply w-full;
+  } /* form .why_contacting_us .why .devs, */
+  form .why_contacting_us .why .colab_or_other {
+    @apply mt-4;
+  }
+  form .why_contacting_us .why,
+  form .ur_budget .min_max {
+    @apply flex-col gap-0;
+  }
+  form input[type="checkbox"] {
+    @apply mr-4;
+  }
+  form input[type="submit"] {
+    @apply w-full;
+  }
+  main .start_project .content .form-send {
+    @apply px-0 py-12;
+  }
+}
+@media (max-width: 700px) {
+  main .start_project .content {
+    @apply p-0;
+  }
+}
+@media (max-width: 500px) {
+  form .why_contacting_us .dev_web-input,
+  form .why_contacting_us .dev_mob_and_desk,
+  form .why_contacting_us .colab,
+  form .why_contacting_us .other {
+    @apply gap-[0.3rem];
+  }
+}

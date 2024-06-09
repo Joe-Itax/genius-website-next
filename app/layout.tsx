@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { barlow } from "@/app/ui/fonts";
-import "@/app/ui/global.css";
+import Footer from "@/app/ui/footer";
+import "@/app/ui/styles/global.css";
 
 export const metadata: Metadata = {
   title: {
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body className={barlow.className}>{children}</body>
+      <Footer />
     </html>
   );
 }
