@@ -50,8 +50,10 @@ export default function Home() {
   Ils nous font confiance
 </section> */}
         {/* Our Service Section */}
-        <section className={`section our-services`}>
-          <div className="heading">
+        <section className={`our-services text-white`}>
+          <div
+            className={`heading  bg-[url('/assets/images/home-page/bg-our-service.webp')] bg-no-repeat bg-center bg-cover`}
+          >
             <h2>Nos Services</h2>
             <div>
               <p>
@@ -60,7 +62,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className="content">
+          <div className="content grid items-start grid-cols-[repeat(3,1fr)]">
             <div className="service service1">
               <div className="container-service">
                 <div className="icon-and-title">
@@ -69,22 +71,23 @@ export default function Home() {
                       src="assets/icons/Union.svg"
                       alt="Icon"
                       loading="lazy"
-                      width={40}
-                      height={40}
+                      width={10}
+                      height={10}
                     />
                   </div>
-                  <h3>Design</h3>
+                  <h3>Sites Web</h3>
                 </div>
                 <div className="paragraph">
                   <p>
-                    Chez Genius, notre équipe de conception est passionnée par
-                    la création de designs époustouflants et centrés sur
-                    l&apos;utilisateur qui captivent votre public et rehaussent
-                    votre marque. Nous pensons qu&apos;un bon design n&apos;est
-                    pas seulement une question d&apos;esthétique ; il
-                    s&apos;agit de créer des expériences utilisateur
-                    transparentes et intuitives.
+                    Nous créons des sites web sur mesure, réactifs et optimisés
+                    pour le SEO. Notre équipe utilise les technologies les plus
+                    récentes pour garantir des performances optimales.
                   </p>
+                  <ul className="list-disc list-inside mt-4">
+                    <li>Design personnalisé</li>
+                    <li>Facile à gérer</li>
+                    <li>Optimisation SEO</li>
+                  </ul>
                 </div>
               </div>
               <div className="button">
@@ -105,17 +108,19 @@ export default function Home() {
                       height={40}
                     />
                   </div>
-                  <h3>Ingénierie</h3>
+                  <h3>Applications web</h3>
                 </div>
                 <div className="paragraph">
                   <p>
-                    Notre équipe d’ingénieurs allie expertise technique et
-                    passion pour l’innovation pour créer des solutions
-                    numériques robustes et évolutives. Nous exploitons les
-                    dernières technologies et les meilleures pratiques pour
-                    fournir des applications hautes performances adaptées à vos
-                    besoins spécifiques.
+                    Nous développons des applications web robustes et évolutives
+                    pour automatiser vos processus métiers et offrir une
+                    expérience utilisateur exceptionnelle.
                   </p>
+                  <ul className="list-disc list-inside mt-4">
+                    <li>Sécurité et scalabilité</li>
+                    <li>Intégration API</li>
+                    <li>Support multi-plateformes</li>
+                  </ul>
                 </div>
               </div>
               <div className="button">
@@ -136,18 +141,19 @@ export default function Home() {
                       height={40}
                     />
                   </div>
-                  <h3>Gestion de Projets</h3>
+                  <h3>e-Commerce</h3>
                 </div>
                 <div className="paragraph">
                   <p>
-                    Notre équipe de gestion de projet expérimentée veille à ce
-                    que vos projets soient livrés à temps, dans les limites du
-                    budget et selon vos spécifications. Nous suivons les
-                    méthodologies standard de l’industrie et utilisons des
-                    outils de communication et de collaboration efficaces pour
-                    vous tenir informé tout au long du processus de
-                    développement.
+                    Boostez vos ventes en ligne avec nos solutions e-commerce
+                    performantes, faciles à gérer et adaptées à vos besoins
+                    spécifiques.
                   </p>
+                  <ul className="list-disc list-inside mt-4">
+                    <li>Design intuitif</li>
+                    <li>Gestion simplifiée</li>
+                    <li>Transactions sécurisées</li>
+                  </ul>
                 </div>
               </div>
               <div className="button">

@@ -11,14 +11,14 @@
 
 /* Our Services Section*/
 main .our-services .heading {
-  background: url("/assets/images/home-page/bg-our-service.webp") no-repeat
-    center center/cover;
+  /* background: url("/assets/images/home-page/bg-our-service.webp") no-repeat
+    center center/cover; */
 }
 main .our-services .content {
-  @apply grid items-start grid-cols-[repeat(3,1fr)];
+  /* @apply grid items-start grid-cols-[repeat(3,1fr)]; */
 }
 main .our-services .content .service {
-  @apply grid grid-rows-[repeat(2,1fr)] h-[35rem] pb-4 p-8;
+  @apply grid grid-rows-[repeat(2,1fr)] h-[33rem] pb-4 p-8;
   align-items: end;
 }
 main .our-services .content .service:not(:last-child) {
@@ -31,6 +31,7 @@ main .our-services .content .service .container-service {
 main .our-services .content .service .container-service .icon-and-title {
   @apply flex flex-col items-start gap-4;
 }
+
 main .our-services .content .service .container-service .service-icon {
   @apply border p-[0.8rem] rounded-lg border-b-[none] border-[solid];
   background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
@@ -42,21 +43,17 @@ main .our-services .content .service .button {
   @apply inline-flex justify-center items-center w-full;
 }
 main .our-services .content .service .button a {
-  @apply border text-white transition-all duration-[0.3s] ease-[ease-in-out] w-full text-center border-[solid] hover:border hover:border-[solid] bg-background;
+  @apply border border-border hover:border-[rgba(121,22,163,1)] text-white w-full text-center bg-background;
 }
-@media (max-width: 1250px) {
-  main .our-services .content .service {
-    @apply h-[35rem];
-  }
-}
+
 @media (max-width: 1110px) {
   main .our-services .content .service {
-    @apply h-[36.5rem];
+    @apply h-[34rem];
   }
 }
 @media (max-width: 950px) {
   main .our-services .content .service {
-    @apply h-[38rem] p-4;
+    @apply h-[35rem] p-4;
   }
 }
 @media (max-width: 800px) {
@@ -67,7 +64,7 @@ main .our-services .content .service .button a {
     @apply h-80;
   }
   main .our-services .content .service:not(:last-child) {
-    @apply border-r-[unset] border-b-[#292929] border-b border-solid;
+    @apply border-r-0 border-b-[#292929] border-b border-solid;
   }
   main .our-services .content .service .container-service .icon-and-title {
     @apply items-center gap-[1.4rem] flex-row;
