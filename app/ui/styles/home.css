@@ -10,13 +10,6 @@
 }
 
 /* Our Services Section*/
-main .our-services .heading {
-  /* background: url("/assets/images/home-page/bg-our-service.webp") no-repeat
-    center center/cover; */
-}
-main .our-services .content {
-  /* @apply grid items-start grid-cols-[repeat(3,1fr)]; */
-}
 main .our-services .content .service {
   @apply grid grid-rows-[repeat(2,1fr)] h-[33rem] pb-4 p-8;
   align-items: end;
@@ -90,15 +83,13 @@ main .our-services .content .service .button a {
     @apply h-[30rem];
   }
 }
-main .why-us .heading {
-  background: url("/assets/images/home-page/bg-why-us.webp") no-repeat center
-    center/cover;
-}
+
+/* Why Us Section */
 main .why-us .content .container {
   @apply grid grid-cols-[repeat(2,1fr)];
 }
 main .why-us .content .container:not(:last-child) {
-  @apply border-b-[#292929] border-b border-solid;
+  @apply border-b-[#292929] border-b border-solid max-[800px]:border-0;
 }
 main .why-us .content .container .container-why {
   @apply flex flex-col items-start gap-8 p-8;
@@ -107,14 +98,14 @@ main .why-us .content .container .container-why:not(:last-child) {
   @apply border-r-[#292929] border-r border-solid;
 }
 .why-us .content .container .container-why .icon-and-title {
-  @apply flex items-center gap-4;
+  @apply flex items-center gap-4 max-[450px]:flex-col max-[450px]:items-start max-[450px]:gap-0;
 }
 .why-us .content .container .container-why .icon-and-title .service-icon {
   @apply border p-[0.8rem] rounded-lg border-b-[none] border-[solid];
   background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
 }
-.why-us .content .container .container-why .icon-and-title .service-icon i {
-  @apply w-10 text-[2.5rem] text-[#A21ADE];
+.why-us .content .container .container-why .icon-and-title .service-icon .icon {
+  @apply text-[2.5rem] text-[#A21ADE];
 }
 @media (max-width: 900px) {
   main .why-us .content .container .container-why {
@@ -123,15 +114,20 @@ main .why-us .content .container .container-why:not(:last-child) {
 }
 @media (max-width: 800px) {
   main .why-us .content .container {
-    @apply flex flex-col border-[unset];
+    @apply flex flex-col border-b-0 border-inherit;
   }
   main .why-us .content .container .container-why {
     @apply py-8;
   }
   main .why-us .content .container .container-why:not(:last-child) {
-    @apply border-r-[unset] border-b-[#292929] border-b border-solid;
+    @apply border-r-0;
+  }
+  main .why-us .content .container .container-why {
+    @apply border-b-[#292929] border-b border-solid;
   }
 }
+
+/* Testimonies section*/
 main .testimonies .heading {
   background: url("/assets/images/home-page/bg-testimonies.webp") no-repeat
     center center/cover;

@@ -3,11 +3,19 @@ import Link from "next/link";
 import "@/app/ui/styles/home.css";
 import Button from "@/app/ui/button";
 
+// l
+import {
+  RiMedalFill,
+  RiShieldFlashFill,
+  RiUserVoiceFill,
+  RiVipCrownFill,
+} from "@remixicon/react";
+
 export default function Home() {
   return (
     <>
       {/* Main Content */}
-      <main>
+      <main className="text-white">
         {/* Hero Section */}
         <section
           className={`hero-section bg-[url('/assets/images/home-page/bg-hero-section.svg')] bg-no-repeat bg-center bg-cover h-screen flex flex-col justify-center items-center gap-8 mb-8 border-b border-solid border-border max-[800px]:px-4 max-[600px]:h-auto max-[600px]:px-4 max-[600px]:py-36`}
@@ -50,7 +58,7 @@ export default function Home() {
   Ils nous font confiance
 </section> */}
         {/* Our Service Section */}
-        <section className={`our-services text-white`}>
+        <section className={`our-services`}>
           <div
             className={`heading  bg-[url('/assets/images/home-page/bg-our-service.webp')] bg-no-repeat bg-center bg-cover`}
           >
@@ -166,7 +174,7 @@ export default function Home() {
         </section>
         {/* Why Choose Us Section */}
         <section className={`section why-us`}>
-          <div className="heading">
+          <div className="heading bg-[url('/assets/images/home-page/bg-why-us.webp')] bg-no-repeat bg-center bg-cover">
             <h2>Pourquoi Choisir Genius?</h2>
             <div>
               <p>
@@ -181,37 +189,32 @@ export default function Home() {
               <div className="container-why">
                 <div className="icon-and-title">
                   <div className="service-icon">
-                    {/* <Image src="/assets/icons/Medaille.svg" /> */}
-                    <i className="ri-medal-fill" />
+                    <RiMedalFill className="icon" />
                   </div>
                   <h3>Expertise</h3>
                 </div>
                 <div className="paragraph">
                   <p>
-                    Chez Genius, notre équipe de conception est passionnée par
-                    la création de designs époustouflants et centrés sur
-                    l&apos;utilisateur qui captivent votre public et rehaussent
-                    votre marque. Nous pensons qu&apos;un bon design n&apos;est
-                    pas seulement une question d&apos;esthétique ; il
-                    s&apos;agit de créer des expériences utilisateur
-                    transparentes et intuitives.
+                    Nous sommes experts en développement web et application,
+                    avec des années d&apos;expérience et une équipe de
+                    professionnels qualifiés. Nous utilisons les dernières
+                    technologies pour garantir des solutions modernes et
+                    efficaces.
                   </p>
                 </div>
               </div>
               <div className="container-why">
                 <div className="icon-and-title">
                   <div className="service-icon">
-                    {/* <Image src="/assets/icons/People-call.svg" /> */}
-                    <i className="ri-user-voice-fill" />
+                    <RiUserVoiceFill className="icon" />
                   </div>
-                  <h3>Approche Centrée Sur le Client</h3>
+                  <h3>Personnalisation</h3>
                 </div>
                 <div className="paragraph">
                   <p>
-                    Nous accordons la priorité à nos clients et à leurs besoins
-                    uniques. Nous écoutons vos idées, vos défis et vos objectifs
-                    et adaptons nos services pour répondre à vos besoins
-                    spécifiques. Votre succès est notre succès.
+                    Chaque projet est unique. Nous offrons des solutions sur
+                    mesure adaptées à vos besoins spécifiques, en tenant compte
+                    de vos objectifs et de votre vision.
                   </p>
                 </div>
               </div>
@@ -220,36 +223,31 @@ export default function Home() {
               <div className="container-why">
                 <div className="icon-and-title">
                   <div className="service-icon">
-                    {/* <Image src="/assets/icons/Bouclier.svg" /> */}
-                    <i className="ri-shield-flash-fill" />
+                    <RiShieldFlashFill className="icon" />
                   </div>
-                  <h3>Solutions Orientées Résultats</h3>
+                  <h3>Support</h3>
                 </div>
                 <div className="paragraph">
                   <p>
-                    Notre objectif principal est de produire des résultats. Nous
-                    combinons créativité et expertise technique pour créer des
-                    produits numériques qui stimulent la croissance de
-                    l&apos;entreprise, améliorent l&apos;expérience utilisateur
-                    et offrent un avantage concurrentiel.
+                    Nous offrons un support client réactif et disponible pour
+                    répondre à vos questions et résoudre vos problèmes
+                    rapidement. Votre satisfaction est notre priorité.
                   </p>
                 </div>
               </div>
               <div className="container-why">
                 <div className="icon-and-title">
                   <div className="service-icon">
-                    {/* <Image src="/assets/icons/Couronne.svg" /> */}
-                    <i className="ri-vip-crown-fill" />
+                    <RiVipCrownFill className="icon" />
                   </div>
-                  <h3>Partenariat Collaboratif</h3>
+                  <h3>Rentabilité</h3>
                 </div>
                 <div className="paragraph">
                   <p>
-                    Nous valorisons les relations à long terme avec nos clients.
-                    Nous nous considérons comme votre partenaire numérique,
-                    fournissant une assistance, une maintenance et des mises à
-                    jour continues pour garantir que vos produits numériques
-                    continuent de prospérer.
+                    Nous proposons des services de qualité à des tarifs
+                    compétitifs. Nos solutions sont conçues pour offrir un
+                    excellent retour sur investissement, en maximisant votre
+                    budget.
                   </p>
                 </div>
               </div>
