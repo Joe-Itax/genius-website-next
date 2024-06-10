@@ -3,7 +3,6 @@ import Link from "next/link";
 import "@/app/ui/styles/home.css";
 import Button from "@/app/ui/button";
 
-// l
 import {
   RiMedalFill,
   RiShieldFlashFill,
@@ -11,6 +10,7 @@ import {
   RiVipCrownFill,
 } from "@remixicon/react";
 import { CardStackTestimonies } from "@/app/ui/home/card-testimonies";
+import FaqSection from "@/app/ui/home/faq-section";
 
 export default function Home() {
   return (
@@ -257,7 +257,7 @@ export default function Home() {
         </section>
         {/* Testimonies Section */}
         <section className={`section testimonies`}>
-          <div className="heading">
+          <div className="heading bg-[url('/assets/images/home-page/bg-testimonies.webp')] bg-no-repeat bg-center bg-cover">
             <h2>Ce Que Disent Nos Clients</h2>
             <div>
               <p>
@@ -270,222 +270,9 @@ export default function Home() {
           </div>
           <CardStackTestimonies />
         </section>
+
         {/* FAQs Section */}
-        <section className={`section faq`}>
-          <div className="heading">
-            <h2>Foires Aux Questions</h2>
-            <div>
-              <p>Vous avez quelques questions supplémentaires ?</p>
-            </div>
-          </div>
-          <div className="content">
-            <div className="faq-container">
-              <div className="faq faq-one">
-                <div className="num-faq">
-                  <span>01</span>
-                </div>
-                <div className="question-content">
-                  <div className="question-box">
-                    <div className="faq-title">
-                      <span>Quels sont les avantages de Genius ?</span>
-                    </div>
-                    <div className="icon-open-answer">
-                      <i className="ri-add-fill" />
-                    </div>
-                  </div>
-                  <div className="answer">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec sed libero eget turpis accumsan facilisis.
-                      Vestibulum ante ipsum primis in faucibus orci luctus et
-                      ultrices posuere cubilia Curae; Vestibulum ante ipsum
-                      primis in faucibus orci luctus et ultrices posuere ; Vesti
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="faq faq-two">
-                <div className="num-faq">
-                  <span>02</span>
-                </div>
-                <div className="question-content">
-                  <div className="question-box">
-                    <div className="faq-title">
-                      <span>Quels sont les avantages de Genius ?</span>
-                    </div>
-                    <div className="icon-open-answer">
-                      <i className="ri-add-fill" />
-                    </div>
-                  </div>
-                  <div className="answer">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec sed libero eget turpis accumsan facilisis.
-                      Vestibulum ante ipsum primis in faucibus orci luctus et
-                      ultrices posuere cubilia Curae; Vestibulum ante ipsum
-                      primis in faucibus orci luctus et ultrices posuere ; Vesti
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="faq faq-three">
-                <div className="num-faq">
-                  <span>03</span>
-                </div>
-                <div className="question-content">
-                  <div className="question-box">
-                    <div className="faq-title">
-                      <span>Quels sont les avantages de Genius ?</span>
-                    </div>
-                    <div className="icon-open-answer">
-                      <i className="ri-add-fill" />
-                    </div>
-                  </div>
-                  <div className="answer">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec sed libero eget turpis accumsan facilisis.
-                      Vestibulum ante ipsum primis in faucibus orci luctus et
-                      ultrices posuere cubilia Curae; Vestibulum ante ipsum
-                      primis in faucibus orci luctus et ultrices posuere ; Vesti
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="faq faq-for">
-                <div className="num-faq">
-                  <span>04</span>
-                </div>
-                <div className="question-content">
-                  <div className="question-box">
-                    <div className="faq-title">
-                      <span>Quels sont les avantages de Genius ?</span>
-                    </div>
-                    <div className="icon-open-answer">
-                      <i className="ri-add-fill" />
-                    </div>
-                  </div>
-                  <div className="answer">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec sed libero eget turpis accumsan facilisis.
-                      Vestibulum ante ipsum primis in faucibus orci luctus et
-                      ultrices posuere cubilia Curae; Vestibulum ante ipsum
-                      primis in faucibus orci luctus et ultrices posuere ; Vesti
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="faq-container">
-              <div className="faq faq-five">
-                <div className="num-faq">
-                  <span>05</span>
-                </div>
-                <div className="question-content">
-                  <div className="question-box">
-                    <div className="faq-title">
-                      <span>Quels sont les avantages de Genius ?</span>
-                    </div>
-                    <div className="icon-open-answer">
-                      <i className="ri-add-fill" />
-                    </div>
-                  </div>
-                  <div className="answer">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec sed libero eget turpis accumsan facilisis.
-                      Vestibulum ante ipsum primis in faucibus orci luctus et
-                      ultrices posuere cubilia Curae; Vestibulum ante ipsum
-                      primis in faucibus orci luctus et ultrices posuere ; Vesti
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="faq faq-six">
-                <div className="num-faq">
-                  <span>06</span>
-                </div>
-                <div className="question-content">
-                  <div className="question-box">
-                    <div className="faq-title">
-                      <span>Quels sont les avantages de Genius ?</span>
-                    </div>
-                    <div className="icon-open-answer">
-                      <i className="ri-add-fill" />
-                    </div>
-                  </div>
-                  <div className="answer">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec sed libero eget turpis accumsan facilisis.
-                      Vestibulum ante ipsum primis in faucibus orci luctus et
-                      ultrices posuere cubilia Curae; Vestibulum ante ipsum
-                      primis in faucibus orci luctus et ultrices posuere ; Vesti
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="faq faq-seven">
-                <div className="num-faq">
-                  <span>07</span>
-                </div>
-                <div className="question-content">
-                  <div className="question-box">
-                    <div className="faq-title">
-                      <span>Quels sont les avantages de Genius ?</span>
-                    </div>
-                    <div className="icon-open-answer">
-                      <i className="ri-add-fill" />
-                    </div>
-                  </div>
-                  <div className="answer">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec sed libero eget turpis accumsan facilisis.
-                      Vestibulum ante ipsum primis in faucibus orci luctus et
-                      ultrices posuere cubilia Curae; Vestibulum ante ipsum
-                      primis in faucibus orci luctus et ultrices posuere ; Vesti
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="faq faq-height">
-                <div className="num-faq">
-                  <span>08</span>
-                </div>
-                <div className="question-content">
-                  <div className="question-box">
-                    <div className="faq-title">
-                      <span>Quels sont les avantages de Genius ?</span>
-                    </div>
-                    <div className="icon-open-answer">
-                      <i className="ri-add-fill" />
-                    </div>
-                  </div>
-                  <div className="answer">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Donec sed libero eget turpis accumsan facilisis.
-                      Vestibulum ante ipsum primis in faucibus orci luctus et
-                      ultrices posuere cubilia Curae; Vestibulum ante ipsum
-                      primis in faucibus orci luctus et ultrices posuere ; Vesti
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="contact-faq">
-            <Link
-              href="mailto:interne.genius@gmail.com"
-              className="btn"
-              target="_blank"
-            >
-              Encore des Questions ?
-            </Link>
-          </div>
-        </section>
+        <FaqSection />
         {/* Start A Project Section */}
         <section className={`section start_project`}>
           <div className="heading">

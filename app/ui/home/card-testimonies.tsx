@@ -1,4 +1,3 @@
-"use client";
 import { CardStack } from "@/app/ui/card-stack";
 import { cn } from "@/utils/cn";
 export function CardStackTestimonies() {
@@ -20,7 +19,7 @@ export const Highlight = ({
   return (
     <span
       className={cn(
-        "font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5",
+        "font-bold bg-blue-500 text-gray-100 rounded-sm px-1 py-0.5",
         className
       )}
     >

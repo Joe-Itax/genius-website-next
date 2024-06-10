@@ -191,28 +191,28 @@ html {
 .our-services,
 .why-us,
 .testimonies,
-.faq,
+.faqs,
 .start_project {
   @apply border-x-border border-l border-solid border-r;
 }
 main .our-services .heading,
 main .why-us .heading,
 main .testimonies .heading,
-main .faq .heading,
+main .faqs .heading,
 main .start_project .heading {
   @apply flex flex-col justify-center items-center gap-4 px-40 py-28;
 }
 main .our-services .heading h2,
 main .why-us .heading h2,
 main .testimonies .heading h2,
-main .faq .heading h2,
+main .faqs .heading h2,
 main .start_project .heading h2 {
   @apply text-center;
 }
 main .our-services .heading p,
 main .why-us .heading p,
 main .testimonies .heading p,
-main .faq .heading p,
+main .faqs .heading p,
 main .start_project .heading p {
   @apply text-center text-[1.1rem];
 }
@@ -224,7 +224,7 @@ main .our-services .content .service .container-service .paragraph p,
   main .our-services .heading,
   main .why-us .heading,
   main .testimonies .heading,
-  main .faq .heading,
+  main .faqs .heading,
   main .start_project .heading {
     @apply px-20 py-28;
   }
@@ -236,14 +236,14 @@ main .our-services .content .service .container-service .paragraph p,
   .our-services,
   .why-us,
   .testimonies,
-  .faq,
+  .faqs,
   .start_project {
     @apply mx-4;
   }
   main .our-services .heading,
   main .why-us .heading,
   main .testimonies .heading,
-  main .faq .heading,
+  main .faqs .heading,
   main .start_project .heading {
     @apply px-[0.8rem] py-28;
   }

@@ -22,8 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={barlow.className}>{children}</body>
-      <Footer />
+      <body className={barlow.className}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

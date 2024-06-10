@@ -128,10 +128,6 @@ main .why-us .content .container .container-why:not(:last-child) {
 }
 
 /* Testimonies section*/
-main .testimonies .heading {
-  background: url("/assets/images/home-page/bg-testimonies.webp") no-repeat
-    center center/cover;
-}
 main .testimonies .content .container {
   @apply grid grid-cols-[repeat(2,1fr)];
 }
@@ -218,43 +214,59 @@ main
     @apply border-r-[unset] border-b-[#292929] border-b border-solid;
   }
 }
-main .faq .heading {
+
+/* FAQ section*/
+/* main .faqs .heading {
   background: url("/assets/images/home-page/bg-faq.webp") no-repeat center
     center/cover;
-}
-main .faq .content {
+} */
+main .faqs .content {
   @apply grid grid-cols-[repeat(2,1fr)];
 }
-main .faq .content .faq-container {
+main .faqs .content .faq-container {
   @apply flex flex-col items-start;
 }
-main .faq .content .faq-container:not(:last-child) {
+main .faqs .content .faq-container:not(:last-child) {
   @apply border-r-[#292929] border-r border-solid;
 }
-main .faq .content .faq-container .faq {
+main .faqs .content .faq-container .faq {
   @apply flex items-start justify-between gap-8 px-8 py-12;
 }
-main .faq .content .faq-container .faq:not(:last-child) {
+main
+  .faqs
+  .content
+  .faq-container
+  .faq
+  .panel1bh-header-custom
+  .MuiAccordionSummary-content.MuiAccordionSummary-contentGutters {
+  margin: 0 !important;
+}
+
+main .faqs .content .faq-container .faq .accordion-custom-class {
+  @apply text-white p-0 shadow-none bg-transparent;
+  margin: 0 !important;
+}
+main .faqs .content .faq-container .faq:not(:last-child) {
   @apply border-b-[#292929] border-b border-solid;
 }
-main .faq .content .faq-container .faq .num-faq {
-  @apply border p-[0.8rem] rounded-lg border-b-[none] border-[solid];
+main .faqs .content .faq-container .faq .num-faq {
+  @apply border px-[0.5rem] py-[0.3rem] rounded-lg border-b-[none] border-[solid];
   background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
 }
-main .faq .content .faq-container .faq .num-faq span {
+main .faqs .content .faq-container .faq .num-faq span {
   @apply text-[2rem] font-medium transition-all duration-[0.3s] ease-[ease-in-out];
 }
-main .faq .content .faq-container .open-answer .num-faq span {
+main .faqs .content .faq-container .open-answer .num-faq span {
   @apply text-[#BF99D7];
 }
-main .faq .content .faq-container .faq .question-content {
+main .faqs .content .faq-container .faq .question-content {
   @apply flex flex-col gap-8;
 }
-main .faq .content .faq-container .faq .question-content .question-box {
+main .faqs .content .faq-container .faq .question-content .question-box {
   @apply flex items-center gap-4 cursor-pointer;
 }
 main
-  .faq
+  .faqs
   .content
   .faq-container
   .faq
@@ -265,7 +277,7 @@ main
   @apply text-[1.8rem] font-normal;
 }
 main
-  .faq
+  .faqs
   .content
   .faq-container
   .faq
@@ -275,7 +287,7 @@ main
   @apply transition-all duration-[0.3s] ease-[ease-in-out];
 }
 main
-  .faq
+  .faqs
   .content
   .faq-container
   .faq
@@ -286,7 +298,7 @@ main
   @apply text-[2rem] transition-all duration-[0.3s] ease-[ease-in-out];
 }
 main
-  .faq
+  .faqs
   .content
   .faq-container
   .open-answer
@@ -296,7 +308,7 @@ main
   @apply rotate-45;
 }
 main
-  .faq
+  .faqs
   .content
   .faq-container
   .open-answer
@@ -306,50 +318,56 @@ main
   i {
   @apply text-[#BF99D7];
 }
-main .faq .content .faq-container .faq .question-content .answer {
+main .faqs .content .faq-container .faq .question-content .answer {
   @apply hidden animate-[fadeInDown];
   animation-duration: 0.5s;
 }
-main .faq .content .faq-container .open-answer .question-content .answer {
+main .faqs .content .faq-container .open-answer .question-content .answer {
   @apply block;
 }
-main .faq .contact-faq {
+main .faqs .contact-faq {
   @apply flex justify-center;
 }
-main .faq .contact-faq a {
+main .faqs .contact-faq a {
   @apply transition-all duration-[0.3s] ease-[ease-in-out] hover:border-[#A21ADE];
   background: #a21ade;
 }
-main .faq .contact-faq a:hover {
+main .faqs .contact-faq a:hover {
   background: transparent;
 }
 @media (max-width: 925px) {
-  main .faq .content .faq-container .faq {
+  main .faqs .content .faq-container .faq {
     @apply gap-6 px-4 py-10;
   }
 }
 @media (max-width: 800px) {
-  main .faq .content {
+  main .faqs .content {
     @apply grid-cols-[1fr];
   }
-  main .faq .content .faq-container {
-    @apply items-center border-[unset];
+  main .faqs .content .faq-container {
+    @apply items-center border-[inherit] border-0;
   }
-  main .faq .content .faq-container .faq {
-    @apply w-full gap-4 justify-between px-4 py-8 border-b-[#292929] border-[unset] border-b border-solid;
+  main .faqs .content .faq-container:not(:last-child) {
+    @apply border-b-border border-b border-solid;
+  }
+  main .faqs .content .faq-container .faq {
+    @apply w-full gap-4 justify-start px-4 py-8 border-0;
+  }
+  main .faqs .content .faq-container .faq:not(:last-child) {
+    @apply border-b-[#292929] border-[unset] border-b border-solid;
   }
 }
 @media (max-width: 640px) {
-  main .faq .content .faq-container .faq {
+  main .faqs .content .faq-container .faq {
     @apply px-2 py-8;
   }
-  main .faq .content .faq-container .faq .num-faq span {
+  main .faqs .content .faq-container .faq .num-faq span {
     @apply text-2xl;
   }
 }
 @media (max-width: 450px) {
   main
-    .faq
+    .faqs
     .content
     .faq-container
     .faq
