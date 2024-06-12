@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { barlow } from "@/app/ui/fonts";
 import Footer from "@/app/ui/footer";
 import "@/app/ui/styles/global.css";
+import "remixicon/fonts/remixicon.css";
 
 export const metadata: Metadata = {
   title: {
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Agence de développement web basée à Kinshasa, RDC. Spécialisée dans la création de sites internet sur mesure, le développement d'applications web et la conception de solutions e-commerce. Nous transformons vos idées en réalité digitale. Contactez-nous pour un devis gratuit !",
   keywords:
-    "développement web, agence web, création de sites internet, applications web, solutions e-commerce, Kinshasa, RDC, agence de développement, services web, conception web, développement de logiciels, devis gratuit, web agency",
+    "Genius, Genius Development, Genius services, Genius service, Genius DRC, Genius RDC, developeur, developeur web ,développement web, agence web, création de sites internet, applications web, solutions e-commerce, Kinshasa, RDC, agence de développement, services web, conception web, développement de logiciels, devis gratuit, web agency",
   robots: "index, follow",
 };
 

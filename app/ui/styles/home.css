@@ -378,10 +378,9 @@ main .faqs .contact-faq a:hover {
     @apply text-[1.3rem];
   }
 }
-main .start_project .heading {
-  background: url("/assets/images/home-page/bg-contact.webp") no-repeat center
-    center/cover;
-}
+
+/* Start Project Section */
+
 main .start_project .heading .logo-box .logo {
   @apply flex items-center justify-center gap-[5px] px-0 py-8;
 }
@@ -429,7 +428,7 @@ form label {
 form input[type="text"],
 form input[type="email"],
 form textarea {
-  @apply text-white text-[22px] w-full resize-y px-[0.3rem] py-[0.8rem] border-b-[#292929] border-[none] border-b border-solid;
+  @apply text-white text-[22px] w-full resize-y px-[0.3rem] py-[0.8rem] border-b-[#292929] border-[none] border-b border-solid focus:border-b-[#A21ADE];
   background: none;
   outline: none;
 }
@@ -453,7 +452,33 @@ form .why_contacting_us .other {
 }
 form .why_contacting_us .why,
 form .ur_budget .min_max {
-  @apply flex gap-8 mt-8;
+  @apply flex  py-8 flex-col gap-8 mt-8;
+}
+
+form .ur_budget .min_max .personal {
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+form .ur_budget .min_max .personal.open {
+  opacity: 1;
+  height: auto;
+}
+form .ur_budget .min_max .personal.closed {
+  opacity: 0;
+  height: 0;
+}
+
+form .ur_budget .min_max .MuiSlider-markLabel {
+  @apply text-white;
+}
+form .ur_budget .min_max .MuiSlider-thumb.MuiSlider-thumbSizeMedium {
+  @apply border-[#4C4C4D] border-[5px] border-solid w-6 h-6;
+}
+form .ur_budget .min_max .MuiSlider-rail {
+  @apply bg-[#333333] h-[.4rem];
+}
+form .ur_budget .min_max .MuiSlider-track {
+  @apply h-[.4rem];
 }
 
 /* Style général des checkbox */
@@ -465,44 +490,47 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked::before {
   /* Code Unicode de l'icône check-line de remixicon */
   font-family: "RemixIcon";
+  content: "\EB7A";
 }
 form .submit {
   @apply w-full self-center flex items-center justify-center;
 }
 form input[type="submit"] {
   @apply w-6/12 transition-all duration-[0.3s] ease-[ease-in-out] hover:border-[#A21ADE] disabled:cursor-not-allowed disabled:hover:border disabled:hover:border-[rgba(126,26,222,0.3)] disabled:hover:border-solid;
-  background: #a21ade;
+  background-color: #a21ade;
+  filter: brightness(1);
 }
 form input[type="submit"]:hover {
-  background: unset;
+  background-color: #a21ade;
+  filter: brightness(1.1);
 }
 form input[type="submit"]:disabled {
   background: rgba(126, 26, 222, 0.3);
 }
 main .start_project .content .form-send {
-  @apply text-center px-8 py-14;
+  /* @apply ; */
 }
 main .start_project .content .form-send .true,
 main .start_project .content .form-send .false {
-  @apply text-[1.2rem] hidden p-8 rounded-[5px];
+  @apply text-[1.2rem] p-4 sm:p-8 rounded-[5px] flex flex-col items-center w-[80%] mx-auto;
 }
 main .start_project .content .form-send .true {
-  background: #198754;
+  /* @apply ; */
 }
 main .start_project .content .form-send .false {
-  background: #02caf0;
+  /* @apply ; */
 }
 main .start_project .content .form-send .true p {
   @apply text-white;
 }
 main .start_project .content .form-send .false p {
-  @apply text-black;
+  @apply text-white;
 }
-main .start_project .content .form-send .true i {
-  @apply text-[2rem] text-[#ffc107];
+main .start_project .content .form-send .true .icon-success {
+  /* @apply ; */
 }
-main .start_project .content .form-send .false i {
-  @apply text-[2rem] text-[#dc3545];
+main .start_project .content .form-send .false .icon-error {
+  /* @apply ; */
 }
 @media (max-width: 1110px) {
   main .start_project .content form {
@@ -516,7 +544,7 @@ main .start_project .content .form-send .false i {
 }
 @media (max-width: 800px) {
   main .start_project .content form {
-    @apply w-full border-[unset];
+    @apply w-full border-[inherit];
   }
   main .start_project .content form .name_email-box {
     @apply flex-col w-full;
@@ -529,7 +557,7 @@ main .start_project .content .form-send .false i {
   }
   form .why_contacting_us .why,
   form .ur_budget .min_max {
-    @apply flex-col gap-0;
+    /* @apply flex flex-col; */
   }
   form input[type="checkbox"] {
     @apply mr-4;
@@ -552,5 +580,11 @@ main .start_project .content .form-send .false i {
   form .why_contacting_us .colab,
   form .why_contacting_us .other {
     @apply gap-[0.3rem];
+  }
+
+  /* form .why_contacting_us .why, */
+  form .ur_budget {
+    @apply px-0;
+    padding-inline: 0.8rem !important;
   }
 }

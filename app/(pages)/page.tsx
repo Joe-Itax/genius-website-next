@@ -4,6 +4,9 @@ import "@/app/ui/styles/home.css";
 import Button from "@/app/ui/button";
 
 import {
+  RiAtLine,
+  RiEmotionHappyFill,
+  RiEmotionUnhappyFill,
   RiMedalFill,
   RiShieldFlashFill,
   RiUserVoiceFill,
@@ -11,6 +14,7 @@ import {
 } from "@remixicon/react";
 import { CardStackTestimonies } from "@/app/ui/home/card-testimonies";
 import FaqSection from "@/app/ui/home/faq-section";
+import Form from "@/app/ui/home/start-project-section/form";
 
 export default function Home() {
   return (
@@ -275,10 +279,10 @@ export default function Home() {
         <FaqSection />
         {/* Start A Project Section */}
         <section className={`section start_project`}>
-          <div className="heading">
+          <div className="heading bg-[url('/assets/images/home-page/bg-contact.webp')] bg-no-repeat bg-center bg-cover">
             <div className="logo-box">
               <span className="logo">
-                <i className="ri-at-line" />
+                <RiAtLine />
                 <span>Genius</span>
               </span>
             </div>
@@ -297,140 +301,7 @@ export default function Home() {
             </div>
           </div>
           <div className="content" id="start-project">
-            <form className="form" id="contact_form" method="post">
-              <div className="name_email-box">
-                <div className="name-input">
-                  <label htmlFor="fullName" className="title">
-                    Nom Complet *
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="fullName"
-                    placeholder="Saisissez ici"
-                  />
-                </div>
-                <div className="email-input">
-                  <label htmlFor="email" className="title">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Saisissez ici"
-                  />
-                </div>
-              </div>
-              <div className="why_contacting_us">
-                <span className="title">Pourquoi vous nous contacter ?</span>
-                <div className="why">
-                  <div className="devs">
-                    <div className="dev_web-input">
-                      <input
-                        type="checkbox"
-                        name="dev_web"
-                        id="dev_web"
-                        defaultValue="dev_web"
-                      />
-                      <label htmlFor="dev_web">Développement Web</label>
-                    </div>
-                    <div className="dev_mob_and_desk">
-                      <input
-                        type="checkbox"
-                        name="dev_mob_and_desk"
-                        id="dev_mob_and_desk"
-                        defaultValue="dev_mob_and_desk"
-                      />
-                      <label htmlFor="dev_mob_and_desk">
-                        Développement App Mobile ou Desktop
-                      </label>
-                    </div>
-                  </div>
-                  <div className="colab_or_other">
-                    <div className="colab">
-                      <input
-                        type="checkbox"
-                        name="colab"
-                        id="colab"
-                        defaultValue="colab"
-                      />
-                      <label htmlFor="colab">Collaboration</label>
-                    </div>
-                    <div className="other">
-                      <input
-                        type="checkbox"
-                        name="other"
-                        id="other"
-                        defaultValue="other"
-                      />
-                      <label htmlFor="other">Autres</label>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="ur_budget">
-                <div className="head">
-                  <span className="title">Votre fourchette budgétaire</span>
-                </div>
-                <div className="min_max">
-                  <div className="min-value">
-                    <label htmlFor="minValue" className="title">
-                      Min
-                    </label>
-                    <input
-                      type="text"
-                      name="minValue"
-                      id="minValue"
-                      placeholder="Saisissez ici"
-                    />
-                  </div>
-                  <div className="max-value">
-                    <label htmlFor="maxValue" className="title">
-                      Max
-                    </label>
-                    <input
-                      type="text"
-                      name="maxValue"
-                      id="maxValue"
-                      placeholder="Saisissez ici"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="message">
-                <span className="title">Votre Message *</span>
-                <textarea
-                  name="message"
-                  placeholder="Saisissez ici"
-                  defaultValue={""}
-                />
-              </div>
-              <div className="submit">
-                <input
-                  type="submit"
-                  defaultValue="Envoyer"
-                  className="btn"
-                  id="btnSubmit"
-                />
-              </div>
-            </form>
-            <div className="form-send">
-              <div className="true">
-                <p>
-                  Merci de nous avoir contacté ! <br />
-                  Nous vous répondrons dans les plus brefs délais.
-                </p>
-                <i className="ri-emotion-happy-fill" />
-              </div>
-              <div className="false">
-                <p>
-                  Une erreur s&apos;est produite lors de l&apos;envoi de votre
-                  formulaire, veuillez ressayer s&apos;il vous plaît.
-                </p>
-                <i className="ri-emotion-unhappy-fill" />
-              </div>
-            </div>
+            <Form />
           </div>
         </section>
       </main>
