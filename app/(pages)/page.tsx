@@ -5,16 +5,15 @@ import Button from "@/app/ui/button";
 
 import {
   RiAtLine,
-  RiEmotionHappyFill,
-  RiEmotionUnhappyFill,
   RiMedalFill,
   RiShieldFlashFill,
   RiUserVoiceFill,
   RiVipCrownFill,
 } from "@remixicon/react";
-import { CardStackTestimonies } from "@/app/ui/home/card-testimonies";
-import FaqSection from "@/app/ui/home/faq-section";
+import { CardStackTestimonies } from "@/app/ui/home/testimonies-section/card-testimonies";
+import FaqSection from "@/app/ui/home/faq-section/faq-section";
 import Form from "@/app/ui/home/start-project-section/form";
+import ButtonStartProject from "../ui/home/start-project-section/button-start-project";
 
 export default function Home() {
   return (
@@ -294,14 +293,15 @@ export default function Home() {
                 numériques.
               </p>
             </div>
-            <div className="cta-start-project">
-              <Link href="#start-project" className="btn">
+            <div className="cta-start-project mt-8">
+              {/* <Link href="#start-project" className="btn">
                 Start Project
-              </Link>
+              </Link> */}
+              <ButtonStartProject className="btn btn-start-project bg-[#A21ADE] hover:border-[#A21ADE] hover:bg-transparent" />
             </div>
           </div>
           <div className="content" id="start-project">
-            <Form />
+            <Form idForm="start-project" />
           </div>
         </section>
       </main>

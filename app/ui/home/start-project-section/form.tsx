@@ -5,7 +5,13 @@ import { submitForm, State } from "@/app/lib/actions";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import FormStatus from "./form-status";
 
-export default function Form({ className }: { className?: string }) {
+export default function Form({
+  className,
+  idForm,
+}: {
+  className?: string;
+  idForm: string;
+}) {
   const initialState = { message: null, errors: {} };
   const [state, dispatch] = useFormState(submitForm, null);
   const [slidersValues, setSlidersValues] = useState<number[]>([500, 1000]);
@@ -69,7 +75,7 @@ export default function Form({ className }: { className?: string }) {
         className={`form ${className} ${
           formSuccess ? "hidden" : "flex"
         } border flex-col justify-center gap-10 px-8 py-20 border-solid w-[70%] max-[1100px]:w-4/5 max-[920px]:w-[90%] max-[920px]:px-4 max-[920px]:py-12  max-[800px]:w-full max-[800px]:border-inherit max-[700px]:border-0 max-[700px]:pt-0`}
-        id="contact_form"
+        id={idForm}
         action={dispatch}
         // action={submitForm}
         aria-describedby="form-error"

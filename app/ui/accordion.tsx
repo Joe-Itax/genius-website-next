@@ -1,12 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
   Box,
-  Typography,
 } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
 import { barlow } from "@/app/ui/fonts";
@@ -38,7 +37,7 @@ export default function AccordionsFaq({
         className={`${barlow.className} accordion-custom-class max-[800px]:w-full`}
       >
         <AccordionSummary
-          expandIcon={<ExpandMore className="text-white" />}
+          expandIcon={<ExpandMore className="text-white text-3xl" />}
           aria-controls="panel1bh-content"
           // id="panel1bh-header"
           className="panel1bh-header-custom"

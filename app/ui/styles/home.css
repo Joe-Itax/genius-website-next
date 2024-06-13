@@ -390,16 +390,6 @@ main .start_project .heading .logo-box .logo i {
 main .start_project .heading .logo-box .logo span {
   @apply font-[bold] text-2xl;
 }
-main .start_project .heading .cta-start-project {
-  @apply mt-8;
-}
-main .start_project .heading .cta-start-project a {
-  @apply transition-all duration-[0.3s] ease-[ease-in-out] hover:border-[#A21ADE];
-  background: #a21ade;
-}
-main .start_project .heading .cta-start-project a:hover {
-  background: transparent;
-}
 main .start_project .content {
   @apply flex-col justify-center items-center flex px-8 py-0 border-t-[solid] border-t;
 }
