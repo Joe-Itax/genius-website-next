@@ -403,9 +403,9 @@ main .start_project .heading .cta-start-project a:hover {
 main .start_project .content {
   @apply flex-col justify-center items-center flex px-8 py-0 border-t-[solid] border-t;
 }
-main .start_project .content form {
-  @apply w-[70%] border flex-col justify-center gap-10 flex px-8 py-20 border-[solid];
-}
+/* main .start_project .content form {
+  @apply ;
+} */
 main .start_project .content form .name_email-box {
   @apply justify-between items-start gap-8 inline-flex;
 }
@@ -510,10 +510,10 @@ form input[type="submit"]:disabled {
 main .start_project .content .form-send {
   /* @apply ; */
 }
-main .start_project .content .form-send .true,
+/* main .start_project .content .form-send .true,
 main .start_project .content .form-send .false {
   @apply text-[1.2rem] p-4 sm:p-8 rounded-[5px] flex flex-col items-center w-[80%] mx-auto;
-}
+} */
 main .start_project .content .form-send .true {
   /* @apply ; */
 }
@@ -534,17 +534,17 @@ main .start_project .content .form-send .false .icon-error {
 }
 @media (max-width: 1110px) {
   main .start_project .content form {
-    @apply w-4/5;
+    /* @apply w-4/5; */
   }
 }
 @media (max-width: 920px) {
   main .start_project .content form {
-    @apply w-[90%] px-4 py-12;
+    /* @apply w-[90%] px-4 py-12; */
   }
 }
 @media (max-width: 800px) {
   main .start_project .content form {
-    @apply w-full border-[inherit];
+    /* @apply w-full border-inherit; */
   }
   main .start_project .content form .name_email-box {
     @apply flex-col w-full;

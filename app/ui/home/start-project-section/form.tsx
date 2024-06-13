@@ -3,7 +3,7 @@ import { useFormState } from "react-dom";
 import DoubleSlider from "@/app/ui/double-slider";
 import { submitForm, State } from "@/app/lib/actions";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
-import { RiEmotionHappyFill, RiEmotionUnhappyFill } from "@remixicon/react";
+import FormStatus from "./form-status";
 
 export default function Form({ className }: { className?: string }) {
   const initialState = { message: null, errors: {} };
@@ -11,6 +11,9 @@ export default function Form({ className }: { className?: string }) {
   const [slidersValues, setSlidersValues] = useState<number[]>([500, 1000]);
   const [personalOpen, setPersonalOpen] = useState<boolean>(false);
   const personalRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+
+  const [formError, setFormError] = useState<boolean>(false);
+  const [formSuccess, setFormSuccess] = useState<boolean>(false);
 
   const PersonalValueTrue = () => {
     setPersonalOpen(true);
@@ -39,12 +42,33 @@ export default function Form({ className }: { className?: string }) {
     }
   }, [personalOpen]);
 
-  console.log("state: ", state);
+  useEffect(() => {
+    if (state?.formResponse) {
+      if (state?.formStatus == "error") {
+        setFormError(true);
+        setFormSuccess(false);
+      } else if (state?.formStatus == "success") {
+        setFormSuccess(true);
+        setFormError(false);
+      }
+
+      //Scroll to the #status-form
+      const statusFormElement = document.getElementById("status-form");
+      if (statusFormElement) {
+        statusFormElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [state]);
+
+  // console.log("state: ", state);
 
   return (
     <>
+      <FormStatus formSuccess={formSuccess} formError={formError} />
       <form
-        className={`form ${className}`}
+        className={`form ${className} ${
+          formSuccess ? "hidden" : "flex"
+        } border flex-col justify-center gap-10 px-8 py-20 border-solid w-[70%] max-[1100px]:w-4/5 max-[920px]:w-[90%] max-[920px]:px-4 max-[920px]:py-12  max-[800px]:w-full max-[800px]:border-inherit max-[700px]:border-0 max-[700px]:pt-0`}
         id="contact_form"
         action={dispatch}
         // action={submitForm}
@@ -138,12 +162,12 @@ export default function Form({ className }: { className?: string }) {
               <input
                 type="hidden"
                 value={slidersValues[0]}
-                name="min-value-slider"
+                name="minValuSlider"
               />
               <input
                 type="hidden"
                 value={slidersValues[1]}
-                name="max-value-slider"
+                name="maxValueSlider"
               />
             </div>
             <div>
@@ -170,7 +194,7 @@ export default function Form({ className }: { className?: string }) {
                 </label>
                 <input
                   type="text"
-                  name="min-value-custom"
+                  name="minValueCustom"
                   id="minValue"
                   placeholder="Saisissez ici"
                   defaultValue={`${slidersValues[0]}`}
@@ -182,7 +206,7 @@ export default function Form({ className }: { className?: string }) {
                 </label>
                 <input
                   type="text"
-                  name="max-value-custom"
+                  name="maxValueCustom"
                   id="maxValue"
                   placeholder="Saisissez ici"
                   defaultValue={`${slidersValues[1]}`}
@@ -223,29 +247,6 @@ export default function Form({ className }: { className?: string }) {
           />
         </div>
       </form>
-
-      <div className="form-send text-center px-8 py-14 w-full" id="status-form">
-        <div className="true bg-[#198754] hidden">
-          <RiEmotionHappyFill
-            size={60}
-            className="icon-success text-[2rem] text-[#ffc107]"
-          />
-          <p>
-            Merci de nous avoir contacté ! <br />
-            Nous vous répondrons dans les plus brefs délais.
-          </p>
-        </div>
-        <div className="false bg-[#dc3545]">
-          <RiEmotionUnhappyFill
-            size={60}
-            className="icon-error text-[2rem] text-[#fff]"
-          />
-          <p>
-            Une erreur s&apos;est produite lors de l&apos;envoi de votre
-            formulaire, veuillez ressayer s&apos;il vous plaît.
-          </p>
-        </div>
-      </div>
     </>
   );
 }
