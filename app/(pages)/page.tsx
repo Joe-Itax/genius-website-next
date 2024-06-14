@@ -37,5 +37,3 @@ export default function Home() {
     </>
   );
 }
-
-// Genre à peine je viens de refactoriser mon code css, et je viens également de rendre en petit composant(en créant pour chacun son fichier à part) toutes les sections de la HOME-PAGE
