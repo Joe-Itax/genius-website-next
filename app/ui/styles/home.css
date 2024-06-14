@@ -1,28 +1,21 @@
 /* Hero Section */
 .hero-section .for-startup_and_more p .detail {
-  @apply text-white bg-neutral-800 border border-solid border-[#333];
+  @apply text-white bg-neutral-800 border border-solid border-[#333] max-[950px]:bg-[inherit] max-[950px]:text-base max-[950px]:p-0 max-[950px]:border-[inherit] max-[950px]:border-0;
 }
 
-@media (max-width: 950px) {
-  .hero-section .for-startup_and_more p .detail {
-    @apply bg-[inherit] text-base p-0 border-[inherit];
-  }
-}
-
+/*
+*******************************************************
+*/
 /* Our Services Section*/
 main .our-services .content .service {
-  @apply grid grid-rows-[repeat(2,1fr)] h-[33rem] pb-4 p-8;
-  align-items: end;
-}
-main .our-services .content .service:not(:last-child) {
-  @apply border-r-border border-r border-solid;
+  @apply grid grid-rows-[repeat(2,1fr)] h-[33rem] pb-4 p-8 items-end max-[1100px]:h-[34rem] max-[950px]:h-[35rem] max-[950px]:p-4 max-[800px]:h-auto border-r-border border-r border-solid last:border-0 max-[800px]:border-r-0 max-[800px]:border-b-border max-[800px]:border-b max-[800px]:last:border-b-0 max-[800px]:flex max-[800px]:flex-col max-[800px]:gap-4;
 }
 main .our-services .content .service .container-service {
   @apply justify-self-start flex flex-col items-start gap-4;
   align-self: start;
 }
 main .our-services .content .service .container-service .icon-and-title {
-  @apply flex flex-col items-start gap-4;
+  @apply flex flex-col items-start gap-4 max-[800px]:items-center max-[800px]:gap-[1.4rem] max-[800px]:flex-row;
 }
 
 main .our-services .content .service .container-service .service-icon {
@@ -39,66 +32,18 @@ main .our-services .content .service .button a {
   @apply border border-border hover:border-[rgba(121,22,163,1)] text-white w-full text-center bg-background;
 }
 
-@media (max-width: 1110px) {
-  main .our-services .content .service {
-    @apply h-[34rem];
-  }
-}
-@media (max-width: 950px) {
-  main .our-services .content .service {
-    @apply h-[35rem] p-4;
-  }
-}
-@media (max-width: 800px) {
-  main .our-services .content {
-    @apply grid-cols-[repeat(1,1fr)];
-  }
-  main .our-services .content .service {
-    @apply h-80;
-  }
-  main .our-services .content .service:not(:last-child) {
-    @apply border-r-0 border-b-[#292929] border-b border-solid;
-  }
-  main .our-services .content .service .container-service .icon-and-title {
-    @apply items-center gap-[1.4rem] flex-row;
-  }
-}
-@media (max-width: 600px) {
-  main .our-services .content .service {
-    @apply h-[23rem];
-  }
-}
-@media (max-width: 470px) {
-  main .our-services .content .service {
-    @apply h-[25rem];
-  }
-}
-@media (max-width: 420px) {
-  main .our-services .content .service {
-    @apply h-[28rem];
-  }
-}
-@media (max-width: 360px) {
-  main .our-services .content .service {
-    @apply h-[30rem];
-  }
-}
-
+/*
+*******************************************************
+*/
 /* Why Us Section */
 main .why-us .content .container {
-  @apply grid grid-cols-[repeat(2,1fr)];
-}
-main .why-us .content .container:not(:last-child) {
-  @apply border-b-[#292929] border-b border-solid max-[800px]:border-0;
+  @apply grid grid-cols-[repeat(2,1fr)] max-[800px]:flex max-[800px]:flex-col max-[800px]:border-b-0 max-[800px]:border-inherit px-0 border-b-[#292929] border-b border-solid max-[800px]:border-0 last:border-b-inherit last:border-b-0;
 }
 main .why-us .content .container .container-why {
-  @apply flex flex-col items-start gap-8 p-8;
-}
-main .why-us .content .container .container-why:not(:last-child) {
-  @apply border-r-[#292929] border-r border-solid;
+  @apply flex flex-col items-start gap-8 p-8 max-[900px]:p-4 border-r-[#292929] border-r border-solid last:border-r-0 max-[800px]:py-8 max-[800px]:px-16 max-[640px]:px-4 max-[800px]:border-0   max-[800px]:border-b-[#292929] max-[800px]:border-b;
 }
 .why-us .content .container .container-why .icon-and-title {
-  @apply flex items-center gap-4 max-[450px]:flex-col max-[450px]:items-start max-[450px]:gap-0;
+  @apply flex items-center gap-4 max-[450px]:items-start max-[450px]:gap-2;
 }
 .why-us .content .container .container-why .icon-and-title .service-icon {
   @apply border p-[0.8rem] rounded-lg border-b-[none] border-[solid];
@@ -107,130 +52,23 @@ main .why-us .content .container .container-why:not(:last-child) {
 .why-us .content .container .container-why .icon-and-title .service-icon .icon {
   @apply text-[2.5rem] text-[#A21ADE];
 }
-@media (max-width: 900px) {
-  main .why-us .content .container .container-why {
-    @apply p-4;
-  }
-}
-@media (max-width: 800px) {
-  main .why-us .content .container {
-    @apply flex flex-col border-b-0 border-inherit;
-  }
-  main .why-us .content .container .container-why {
-    @apply py-8;
-  }
-  main .why-us .content .container .container-why:not(:last-child) {
-    @apply border-r-0;
-  }
-  main .why-us .content .container .container-why {
-    @apply border-b-[#292929] border-b border-solid;
-  }
-}
+
+/*
+*******************************************************
+*/
 
 /* Testimonies section*/
-main .testimonies .content .container {
-  @apply grid grid-cols-[repeat(2,1fr)];
-}
-main .testimonies .content .container:not(:last-child) {
-  @apply border-b-[#292929] border-b border-solid;
-}
-main .testimonies .content .container .container-testimonies {
-  @apply flex flex-col items-start gap-8 px-8 py-14;
-}
-main .testimonies .content .container .container-testimonies:not(:last-child) {
-  @apply border-r-[#292929] border-r border-solid;
-}
-main .testimonies .content .container .container-testimonies h3 {
-  @apply text-[#D89AFF];
-}
-main
-  .testimonies
-  .content
-  .container
-  .container-testimonies
-  .container-info-client {
-  @apply flex items-center gap-[0.7rem] border border-neutral-800 w-full p-5 rounded-lg border-solid;
-  background: rgba(36, 36, 36, 0.2);
-}
-main
-  .testimonies
-  .content
-  .container
-  .container-testimonies
-  .container-info-client
-  .image-client {
-  @apply w-[70px] h-[70px] flex items-center justify-center rounded-lg;
-  background: linear-gradient(0deg, #bf99d7 0%, #bf99d7 100%);
-}
-main
-  .testimonies
-  .content
-  .container
-  .container-testimonies
-  .container-info-client
-  .image-client
-  img {
-  @apply rounded-lg;
-}
-main
-  .testimonies
-  .content
-  .container
-  .container-testimonies
-  .container-info-client
-  .identite-client
-  .name
-  span {
-  @apply text-white text-[1.2rem] font-medium;
-}
-main
-  .testimonies
-  .content
-  .container
-  .container-testimonies
-  .container-info-client
-  .identite-client
-  .post
-  span {
-  @apply font-normal text-base;
-}
-@media (max-width: 900px) {
-  main .testimonies .content .container .container-testimonies {
-    @apply p-4;
-  }
-}
-@media (max-width: 800px) {
-  main .testimonies .content .container {
-    @apply flex flex-col border-[unset];
-  }
-  main .testimonies .content .container .container-testimonies {
-    @apply py-8;
-  }
-  main
-    .testimonies
-    .content
-    .container
-    .container-testimonies:not(:last-child) {
-    @apply border-r-[unset] border-b-[#292929] border-b border-solid;
-  }
+
+/*
+*******************************************************
+*/
+/* FAQ section*/
+main .faqs .content .faq-container {
+  @apply flex flex-col items-start border-r-[#292929] border-r border-solid last:border-r-0 max-[800px]:items-center max-[800px]:border-inherit max-[800px]:border-0 max-[800px]:border-b max-[800px]:last:border-0;
 }
 
-/* FAQ section*/
-/* main .faqs .heading {
-  background: url("/assets/images/home-page/bg-faq.webp") no-repeat center
-    center/cover;
-} */
-main .faqs .content {
-  @apply grid grid-cols-[repeat(2,1fr)];
-}
-main .faqs .content .faq-container {
-  @apply flex flex-col items-start;
-}
-main .faqs .content .faq-container:not(:last-child) {
-  @apply border-r-[#292929] border-r border-solid;
-}
 main .faqs .content .faq-container .faq {
-  @apply flex items-start justify-between gap-8 px-8 py-12;
+  @apply flex items-start justify-between gap-8 px-8 py-12 max-[925px]:px-4 max-[925px]:py-10 max-[800px]:px-4 max-[800px]:py-8 max-[640px]:px-2 max-[640px]:py-8 max-[925px]:gap-6  w-full border-b-border border-b border-solid last:border-b-0 max-[800px]:w-full max-[800px]:gap-4 max-[800px]:justify-start max-[800px]:border-b-border;
 }
 main
   .faqs
@@ -246,166 +84,41 @@ main .faqs .content .faq-container .faq .accordion-custom-class {
   @apply text-white p-0 shadow-none bg-transparent;
   margin: 0 !important;
 }
-main .faqs .content .faq-container .faq:not(:last-child) {
-  @apply border-b-[#292929] border-b border-solid;
-}
 main .faqs .content .faq-container .faq .num-faq {
   @apply border px-[0.5rem] py-[0.3rem] rounded-lg border-b-[none] border-[solid];
   background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
 }
 main .faqs .content .faq-container .faq .num-faq span {
-  @apply text-[2rem] font-medium transition-all duration-[0.3s] ease-[ease-in-out];
+  @apply text-[1.8rem] font-medium transition-all duration-[0.3s] ease-[ease-in-out] max-[640px]:text-xl;
 }
-main .faqs .content .faq-container .open-answer .num-faq span {
-  @apply text-[#BF99D7];
-}
-main .faqs .content .faq-container .faq .question-content {
-  @apply flex flex-col gap-8;
-}
-main .faqs .content .faq-container .faq .question-content .question-box {
-  @apply flex items-center gap-4 cursor-pointer;
-}
-main
-  .faqs
-  .content
-  .faq-container
-  .faq
-  .question-content
-  .question-box
-  .faq-title
-  span {
-  @apply text-[1.8rem] font-normal;
-}
-main
-  .faqs
-  .content
-  .faq-container
-  .faq
-  .question-content
-  .question-box
-  .icon-open-answer {
-  @apply transition-all duration-[0.3s] ease-[ease-in-out];
-}
-main
-  .faqs
-  .content
-  .faq-container
-  .faq
-  .question-content
-  .question-box
-  .icon-open-answer
-  i {
-  @apply text-[2rem] transition-all duration-[0.3s] ease-[ease-in-out];
-}
-main
-  .faqs
-  .content
-  .faq-container
-  .open-answer
-  .question-content
-  .question-box
-  .icon-open-answer {
-  @apply rotate-45;
-}
-main
-  .faqs
-  .content
-  .faq-container
-  .open-answer
-  .question-content
-  .question-box
-  .icon-open-answer
-  i {
-  @apply text-[#BF99D7];
-}
-main .faqs .content .faq-container .faq .question-content .answer {
-  @apply hidden animate-[fadeInDown];
-  animation-duration: 0.5s;
-}
-main .faqs .content .faq-container .open-answer .question-content .answer {
-  @apply block;
-}
+
 main .faqs .contact-faq {
-  @apply flex justify-center;
+  @apply flex justify-center pb-6;
 }
 main .faqs .contact-faq a {
-  @apply transition-all duration-[0.3s] ease-[ease-in-out] hover:border-[#A21ADE];
-  background: #a21ade;
-}
-main .faqs .contact-faq a:hover {
-  background: transparent;
-}
-@media (max-width: 925px) {
-  main .faqs .content .faq-container .faq {
-    @apply gap-6 px-4 py-10;
-  }
-}
-@media (max-width: 800px) {
-  main .faqs .content {
-    @apply grid-cols-[1fr];
-  }
-  main .faqs .content .faq-container {
-    @apply items-center border-[inherit] border-0;
-  }
-  main .faqs .content .faq-container:not(:last-child) {
-    @apply border-b-border border-b border-solid;
-  }
-  main .faqs .content .faq-container .faq {
-    @apply w-full gap-4 justify-start px-4 py-8 border-0;
-  }
-  main .faqs .content .faq-container .faq:not(:last-child) {
-    @apply border-b-[#292929] border-[unset] border-b border-solid;
-  }
-}
-@media (max-width: 640px) {
-  main .faqs .content .faq-container .faq {
-    @apply px-2 py-8;
-  }
-  main .faqs .content .faq-container .faq .num-faq span {
-    @apply text-2xl;
-  }
-}
-@media (max-width: 450px) {
-  main
-    .faqs
-    .content
-    .faq-container
-    .faq
-    .question-content
-    .question-box
-    .faq-title
-    span {
-    @apply text-[1.3rem];
-  }
+  @apply transition-all duration-[0.3s] ease-[ease-in-out] bg-[#a21ade] hover:bg-transparent hover:border-[#A21ADE];
 }
 
+/*
+*******************************************************
+*/
 /* Start Project Section */
 
-main .start_project .heading .logo-box .logo {
-  @apply flex items-center justify-center gap-[5px] px-0 py-8;
-}
-main .start_project .heading .logo-box .logo i {
-  @apply text-[2rem];
-}
-main .start_project .heading .logo-box .logo span {
-  @apply font-[bold] text-2xl;
-}
 main .start_project .content {
-  @apply flex-col justify-center items-center flex px-8 py-0 border-t-[solid] border-t;
+  @apply flex-col justify-center items-center flex px-8 py-0 max-[700px]:p-0 border-t-[solid] border-t;
 }
-/* main .start_project .content form {
-  @apply ;
-} */
 main .start_project .content form .name_email-box {
-  @apply justify-between items-start gap-8 inline-flex;
+  @apply justify-between items-start gap-8 inline-flex max-[800px]:w-full max-[800px]:flex-col;
+}
+main .start_project .content form .name_email-box * {
+  @apply w-full;
 }
 main .start_project .content form .name_email-box .name-input,
 main .start_project .content form .name_email-box .email-input,
 main .start_project .content form .why_contacting_us,
 main .start_project .content form .ur_budget,
 main .start_project .content form .message {
-  @apply flex-1 border px-4 py-[1.2rem] rounded-lg border-[solid];
-  background: rgba(36, 36, 36, 0.5);
+  @apply flex-1 border px-4 py-[1.2rem] rounded-lg border-[solid] bg-[rgba(36,36,36,0.5)];
 }
 main .start_project .content form .name_email-box .name-input,
 main .start_project .content form .name_email-box .email-input {
@@ -430,19 +143,28 @@ form textarea::placeholder {
   @apply text-[#656567] text-lg font-normal leading-[27px];
   word-wrap: break-word;
 }
+form .why_contacting_us .why .colab_or_other {
+  /* @apply max-[800px]:mt-4; */
+}
 form .why_contacting_us .why .devs,
 form .why_contacting_us .why .colab_or_other {
-  @apply flex flex-col gap-4;
+  @apply flex flex-col gap-4 px-8 max-[600px]:px-0;
 }
 form .why_contacting_us .dev_web-input,
 form .why_contacting_us .dev_mob_and_desk,
 form .why_contacting_us .colab,
 form .why_contacting_us .other {
-  @apply flex items-center gap-4;
+  @apply flex items-center;
+}
+form .why_contacting_us .dev_web-input label,
+form .why_contacting_us .dev_mob_and_desk label,
+form .why_contacting_us .colab label,
+form .why_contacting_us .other label {
+  @apply px-4 max-[500px]:px-2;
 }
 form .why_contacting_us .why,
 form .ur_budget .min_max {
-  @apply flex  py-8 flex-col gap-8 mt-8;
+  @apply flex  py-8 flex-col gap-4 max-[800px]:gap-4 mt-8;
 }
 
 form .ur_budget .min_max .personal {
@@ -486,95 +208,5 @@ form .submit {
   @apply w-full self-center flex items-center justify-center;
 }
 form input[type="submit"] {
-  @apply w-6/12 transition-all duration-[0.3s] ease-[ease-in-out] hover:border-[#A21ADE] disabled:cursor-not-allowed disabled:hover:border disabled:hover:border-[rgba(126,26,222,0.3)] disabled:hover:border-solid;
-  background-color: #a21ade;
-  filter: brightness(1);
-}
-form input[type="submit"]:hover {
-  background-color: #a21ade;
-  filter: brightness(1.1);
-}
-form input[type="submit"]:disabled {
-  background: rgba(126, 26, 222, 0.3);
-}
-main .start_project .content .form-send {
-  /* @apply ; */
-}
-/* main .start_project .content .form-send .true,
-main .start_project .content .form-send .false {
-  @apply text-[1.2rem] p-4 sm:p-8 rounded-[5px] flex flex-col items-center w-[80%] mx-auto;
-} */
-main .start_project .content .form-send .true {
-  /* @apply ; */
-}
-main .start_project .content .form-send .false {
-  /* @apply ; */
-}
-main .start_project .content .form-send .true p {
-  @apply text-white;
-}
-main .start_project .content .form-send .false p {
-  @apply text-white;
-}
-main .start_project .content .form-send .true .icon-success {
-  /* @apply ; */
-}
-main .start_project .content .form-send .false .icon-error {
-  /* @apply ; */
-}
-@media (max-width: 1110px) {
-  main .start_project .content form {
-    /* @apply w-4/5; */
-  }
-}
-@media (max-width: 920px) {
-  main .start_project .content form {
-    /* @apply w-[90%] px-4 py-12; */
-  }
-}
-@media (max-width: 800px) {
-  main .start_project .content form {
-    /* @apply w-full border-inherit; */
-  }
-  main .start_project .content form .name_email-box {
-    @apply flex-col w-full;
-  }
-  main .start_project .content form .name_email-box * {
-    @apply w-full;
-  } /* form .why_contacting_us .why .devs, */
-  form .why_contacting_us .why .colab_or_other {
-    @apply mt-4;
-  }
-  form .why_contacting_us .why,
-  form .ur_budget .min_max {
-    /* @apply flex flex-col; */
-  }
-  form input[type="checkbox"] {
-    @apply mr-4;
-  }
-  form input[type="submit"] {
-    @apply w-full;
-  }
-  main .start_project .content .form-send {
-    @apply px-0 py-12;
-  }
-}
-@media (max-width: 700px) {
-  main .start_project .content {
-    @apply p-0;
-  }
-}
-@media (max-width: 500px) {
-  form .why_contacting_us .dev_web-input,
-  form .why_contacting_us .dev_mob_and_desk,
-  form .why_contacting_us .colab,
-  form .why_contacting_us .other {
-    @apply gap-[0.3rem];
-  }
-
-  /* form .why_contacting_us .why, */
-  form .ur_budget {
-    @apply px-0;
-    padding-inline: 0.8rem !important;
-  }
+  @apply w-6/12 transition-all duration-[0.3s] ease-[ease-in-out] hover:border-[#A21ADE] disabled:cursor-not-allowed disabled:hover:border disabled:hover:border-[rgba(126,26,222,0.3)] disabled:hover:border-solid brightness-100 bg-[#A21ADE] hover:brightness-110 disabled:bg-[rgba(126,26,222,.3)] max-[600px]:w-full;
 }

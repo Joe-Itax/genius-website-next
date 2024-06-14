@@ -158,7 +158,7 @@ export default function Form({
             </div>
           </div>
         </div>
-        <div className="ur_budget">
+        <div className="ur_budget max-[500px]:pe-3">
           <div className="head">
             <span className="title">Votre fourchette budgétaire</span>
           </div>
@@ -178,6 +178,7 @@ export default function Form({
             </div>
             <div>
               <button
+                type="button"
                 className="btn border-[#a21ade] hover:bg-zinc-800"
                 onClick={() => {
                   if (personalOpen) {

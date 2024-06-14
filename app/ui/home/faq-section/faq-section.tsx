@@ -122,17 +122,15 @@ export default function FaqSection() {
           <p>Vous avez quelques questions supplémentaires ?</p>
         </div>
       </div>
-      <div className="content">
+      <div className="content grid grid-cols-[repeat(2,1fr)] max-[800px]:grid-cols-[1fr]">
         <div className="faq-container">
           {faqs1.map((faq) => (
             <>
               <div className={`faq faq-${faq.id}`} key={faq.id}>
-                <div className="num-faq">
-                  <span>{faq.id}</span>
-                </div>
                 <AccordionsFaq
                   question={faq.question}
                   response={faq.response}
+                  numFaq={faq.id}
                 />
               </div>
             </>
@@ -143,12 +141,10 @@ export default function FaqSection() {
           {faqs2.map((faq) => (
             <>
               <div className={`faq faq-${faq.id}`} key={faq.id}>
-                <div className="num-faq">
-                  <span>{faq.id}</span>
-                </div>
                 <AccordionsFaq
                   question={faq.question}
                   response={faq.response}
+                  numFaq={faq.id}
                 />
               </div>
             </>
