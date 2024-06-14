@@ -62,6 +62,8 @@ export default function Footer() {
                 href="https://facebook.com/joseph-itakala.102"
                 target="_blank"
                 className={`border border-solid border-[#2E2E2E] border-b-0 rounded-lg p-3 bg-gradient-to-b from-[#242424] from-0% to-[rgba(36, 36, 36, 0)] to-100%`}
+                aria-label="Profile Facebook de Joseph Itakala"
+                title="Profile Facebook de Joseph Itakala"
               >
                 <RiFacebookCircleFill />
               </Link>
@@ -69,6 +71,8 @@ export default function Footer() {
                 href="https://twitter.com/Joseph_Itakala"
                 target="_blank"
                 className={`border border-solid border-[#2E2E2E] border-b-0 rounded-lg p-3 bg-gradient-to-b from-[#242424] from-0% to-[rgba(36, 36, 36, 0)] to-100%`}
+                aria-label="Profile Twitter de Joseph Itakala"
+                title="Profile Twitter de Joseph Itakala"
               >
                 <RiTwitterXFill />
               </Link>
@@ -76,6 +80,8 @@ export default function Footer() {
                 href="https://linkedin.com/in/joseph-itakala-2a6465250"
                 target="_blank"
                 className={`border border-solid border-[#2E2E2E] border-b-0 rounded-lg p-3 bg-gradient-to-b from-[#242424] from-0% to-[rgba(36, 36, 36, 0)] to-100%`}
+                aria-label="Profile Linkedin de Joseph Itakala"
+                title="Profile Linkedin de Joseph Itakala"
               >
                 <RiLinkedinBoxFill />
               </Link>

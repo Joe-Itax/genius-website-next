@@ -5,14 +5,24 @@ import "@/app/ui/styles/global.css";
 import "remixicon/fonts/remixicon.css";
 
 export const metadata: Metadata = {
+  authors: [
+    {
+      name: "Joseph Itakala",
+      url: "https://linkedin.com/in/joseph-itakala-2a6465250 | https://github.com/Joe-Itax",
+    },
+    {
+      name: "Genius Development",
+      url: "https://genius.dev | https://genius-service.vercel.app",
+    },
+  ],
   title: {
     default: "Genius Development",
     template: "%s | Genius Development",
   },
   description:
-    "Agence de développement web basée à Kinshasa, RDC. Spécialisée dans la création de sites internet sur mesure, le développement d'applications web et la conception de solutions e-commerce. Nous transformons vos idées en réalité digitale. Contactez-nous pour un devis gratuit !",
+    "Agence web à Kinshasa, spécialisée en création de sites internet, applis web et solutions e-commerce. Transformez vos idées en réalité digitale avec un devis gratuit !",
   keywords:
-    "Genius, Genius Development, Genius services, Genius service, Genius DRC, Genius RDC, developeur, developeur web ,développement web, agence web, création de sites internet, applications web, solutions e-commerce, Kinshasa, RDC, agence de développement, services web, conception web, développement de logiciels, devis gratuit, web agency",
+    "Genius, Genius Development, Genius services, Genius service, Genius DRC, Genius RDC, Geniusdrc, Geniusrdc, developeur, developeur web ,développement web, agence web, création de sites internet, applications web, solutions e-commerce, Kinshasa, RDC, agence de développement, services web, conception web, développement de logiciels, devis gratuit, web agency",
   robots: "index, follow",
 };
 
