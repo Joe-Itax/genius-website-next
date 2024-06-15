@@ -50,7 +50,7 @@ main .why-us .content .container .container-why {
   background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
 }
 .why-us .content .container .container-why .icon-and-title .service-icon .icon {
-  @apply text-[2.5rem] text-[#A21ADE];
+  @apply text-[2.5rem] text-primary;
 }
 
 /*
@@ -89,14 +89,14 @@ main .faqs .content .faq-container .faq .num-faq {
   background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
 }
 main .faqs .content .faq-container .faq .num-faq span {
-  @apply text-[1.8rem] font-medium transition-all duration-[0.3s] ease-[ease-in-out] max-[640px]:text-xl;
+  @apply text-[1.8rem] font-medium transition-all max-[640px]:text-xl;
 }
 
 main .faqs .contact-faq {
   @apply flex justify-center pb-6;
 }
 main .faqs .contact-faq a {
-  @apply transition-all duration-[0.3s] ease-[ease-in-out] bg-[#a21ade] hover:bg-transparent hover:border-[#A21ADE];
+  @apply transition-all bg-primary hover:bg-transparent hover:border-primary;
 }
 
 /*
@@ -131,7 +131,7 @@ form label {
 form input[type="text"],
 form input[type="email"],
 form textarea {
-  @apply text-white text-[22px] w-full resize-y px-[0.3rem] py-[0.8rem] border-b-[#292929] border-[none] border-b border-solid focus:border-b-[#A21ADE];
+  @apply text-white text-[22px] w-full resize-y px-[0.3rem] py-[0.8rem] border-b-[#292929] border-[none] border-b border-solid focus:border-b-primary;
   background: none;
   outline: none;
 }
@@ -184,20 +184,18 @@ form .ur_budget .min_max .MuiSlider-markLabel {
   @apply text-white;
 }
 form .ur_budget .min_max .MuiSlider-thumb.MuiSlider-thumbSizeMedium {
-  @apply border-[#4C4C4D] border-[5px] border-solid w-6 h-6;
+  @apply border-[#4C4C4D] border-[5px] border-solid w-6 h-6 text-primary;
 }
 form .ur_budget .min_max .MuiSlider-rail {
   @apply bg-[#333333] h-[.4rem];
 }
 form .ur_budget .min_max .MuiSlider-track {
-  @apply h-[.4rem];
+  @apply h-[.4rem] text-primary;
 }
 
 /* Style général des checkbox */
 input[type="checkbox"] {
-  @apply relative w-7 h-7 rounded border appearance-none p-1 border-[solid] checked:before:content-["\EB7B"] checked:before:absolute checked:before:-translate-x-2/4 checked:before:-translate-y-2/4 checked:before:text-[#B97AE0] checked:before:left-2/4 checked:before:top-2/4;
-  background: #262626;
-  -webkit-appearance: none;
+  @apply relative w-7 h-7 rounded border appearance-none p-1 border-[solid] checked:before:content-["\EB7B"] checked:before:absolute checked:before:-translate-x-2/4 checked:before:-translate-y-2/4 checked:before:text-primary checked:before:left-2/4 checked:before:top-2/4 bg-[#262626];
 }
 input[type="checkbox"]:checked::before {
   /* Code Unicode de l'icône check-line de remixicon */
@@ -208,5 +206,5 @@ form .submit {
   @apply w-full self-center flex items-center justify-center;
 }
 form input[type="submit"] {
-  @apply w-6/12 transition-all duration-[0.3s] ease-[ease-in-out] hover:border-[#A21ADE] disabled:cursor-not-allowed disabled:hover:border disabled:hover:border-[rgba(126,26,222,0.3)] disabled:hover:border-solid brightness-100 bg-[#A21ADE] hover:brightness-110 disabled:bg-[rgba(126,26,222,.3)] max-[600px]:w-full;
+  @apply w-6/12 transition-all hover:border-primary disabled:cursor-not-allowed disabled:hover:border disabled:hover:border-[rgba(126,26,222,0.3)] disabled:hover:border-solid bg-primary hover:bg-primary-foreground disabled:bg-[rgba(126,26,222,.3)] max-[600px]:w-full;
 }

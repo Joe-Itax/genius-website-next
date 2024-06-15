@@ -17,8 +17,8 @@ html {
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
 
-    --primary: 24.6 95% 53.1%;
-    --primary-foreground: 60 9.1% 97.8%;
+    --primary: 282, 79%, 49%;
+    --primary-foreground: 282, 70%, 43%;
 
     --secondary: 60 4.8% 95.9%;
     --secondary-foreground: 24 9.8% 10%;
@@ -43,7 +43,7 @@ html {
 
 @layer base {
   * {
-    @apply border-border transition-all duration-300;
+    @apply border-border transition-all duration-300 text-white;
   }
   html body {
     @apply bg-background;
@@ -58,7 +58,7 @@ html {
   }
 
   h3 {
-    @apply text-[2rem] font-medium max-[800px]:text-[1.9rem];
+    @apply text-[2rem] font-medium max-[800px]:text-[1.9rem] max-[500px]:text-[1.5rem];
   }
 
   h4 {
@@ -167,3 +167,31 @@ main .our-services .content .service .container-service .paragraph p,
 /*
 *******************************************************
 */
+
+/* ======================== Header | NavBar ======================= */
+.scroll-down header {
+  transform: translate3d(0, -100%, 0);
+}
+header {
+  @apply flex justify-between items-center bg-[#191919] text-base w-full sticky z-[9999] transition-all top-0;
+}
+header .logo-box a {
+  @apply flex items-center justify-center pl-0 p-8;
+}
+header nav ul li a {
+  @apply font-semibold border transition-all px-4 py-2 rounded-lg border-solid border-transparent hover:text-primary text-[1.2rem] max-[1200px]:px-[0.7rem] max-[1200px]:py-[0.3rem];
+}
+header nav ul li a.active {
+  @apply bg-neutral-700 hover:text-inherit;
+}
+
+/****************  Navbar Mobile  ****************/
+nav.nav-mobile ul li {
+  @apply border-b border-border last:border-b-inherit last:border-b-0;
+}
+nav.nav-mobile ul li a {
+  @apply block text-xl font-bold w-full pl-5 py-4 hover:bg-violet-800;
+}
+nav.nav-mobile ul li a.active {
+  @apply bg-violet-800;
+}

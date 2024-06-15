@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { barlow } from "@/app/ui/fonts";
+import Header from "@/app/ui/header/header";
 import Footer from "@/app/ui/footer";
 import "@/app/ui/styles/global.css";
 import "remixicon/fonts/remixicon.css";
+import { cn } from "@/app/lib/utils";
 
 export const metadata: Metadata = {
   authors: [
@@ -32,8 +34,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fr">
-      <body className={barlow.className}>
+    <html lang="fr" suppressHydrationWarning>
+      <body className={cn(barlow.className, barlow.variable, "bg-background")}>
+        <Header />
         {children}
         <Footer />
       </body>

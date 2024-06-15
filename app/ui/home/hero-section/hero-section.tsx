@@ -23,7 +23,7 @@ export default function HeroSection() {
         <div className="realisation">
           <Link
             href="/realisations"
-            className="btn border-neutral-800 font-medium text-[1.2rem] bg-[#a21ade] hover:bg-[rgba(36,36,36,1)]"
+            className="btn border-border font-medium text-[1.2rem] bg-primary hover:bg-[rgba(36,36,36,1)]"
           >
             Nos Réalisations
           </Link>
@@ -31,7 +31,7 @@ export default function HeroSection() {
         <div className="contact">
           <Link
             href="/contact"
-            className="btn border-neutral-800 font-medium text-[1.2rem] bg-[rgba(36,36,36,1)] hover:bg-[#a21ade]"
+            className="btn border-border font-medium text-[1.2rem] bg-[rgba(36,36,36,1)] hover:bg-primary"
           >
             Nous Contacter
           </Link>

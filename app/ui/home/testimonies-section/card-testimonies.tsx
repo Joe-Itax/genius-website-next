@@ -1,5 +1,5 @@
 import { CardStack } from "@/app/ui/card-stack";
-import { cn } from "@/utils/cn";
+import { cn } from "@/app/lib/utils";
 export function CardStackTestimonies() {
   return (
     <div className="flex items-center justify-center w-full py-20">

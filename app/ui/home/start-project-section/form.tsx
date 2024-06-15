@@ -179,7 +179,7 @@ export default function Form({
             <div>
               <button
                 type="button"
-                className="btn border-[#a21ade] hover:bg-zinc-800"
+                className="btn border-primary hover:bg-zinc-800"
                 onClick={() => {
                   if (personalOpen) {
                     PersonalValueFalse();

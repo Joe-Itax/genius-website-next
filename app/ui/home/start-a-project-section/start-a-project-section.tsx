@@ -21,7 +21,7 @@ export default function StartAProjectSection() {
           </p>
         </div>
         <div className="cta-start-project mt-8">
-          <ButtonStartProject className="btn btn-start-project bg-[#A21ADE] hover:border-[#A21ADE] hover:bg-transparent" />
+          <ButtonStartProject className="btn btn-start-project bg-primary hover:border-primary hover:bg-transparent" />
         </div>
       </div>
       <div className="content" id="start-project">
