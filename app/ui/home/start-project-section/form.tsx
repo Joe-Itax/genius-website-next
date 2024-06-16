@@ -1,7 +1,7 @@
 "use client";
 import { useFormState } from "react-dom";
 import DoubleSlider from "@/app/ui/double-slider";
-import { submitForm, State } from "@/app/lib/actions";
+import { submitForm } from "@/app/lib/actions";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import FormStatus from "./form-status";
 
@@ -17,6 +17,7 @@ export default function Form({
   const [slidersValues, setSlidersValues] = useState<number[]>([500, 1000]);
   const [personalOpen, setPersonalOpen] = useState<boolean>(false);
   const personalRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
+  const sliderRef: MutableRefObject<HTMLDivElement | null> = useRef(null);
 
   const [formError, setFormError] = useState<boolean>(false);
   const [formSuccess, setFormSuccess] = useState<boolean>(false);
@@ -30,17 +31,31 @@ export default function Form({
 
   useEffect(() => {
     const personalElement = personalRef.current;
+    const sliderElement = sliderRef.current;
 
-    if (personalElement) {
+    if (personalElement && sliderElement) {
       if (personalOpen) {
         personalElement.style.display = "block";
         requestAnimationFrame(() => {
           personalElement.style.opacity = "1";
           personalElement.style.height = personalElement.scrollHeight + "px";
+
+          sliderElement.style.opacity = "0";
+          sliderElement.style.height = "0";
         });
+
+        setTimeout(() => {
+          sliderElement.style.display = "none";
+        }, 300);
       } else {
         personalElement.style.opacity = "0";
         personalElement.style.height = "0";
+
+        sliderElement.style.display = "block";
+        requestAnimationFrame(() => {
+          sliderElement.style.opacity = "1";
+          sliderElement.style.height = sliderElement.scrollHeight + "px";
+        });
         setTimeout(() => {
           personalElement.style.display = "none";
         }, 300);
@@ -77,7 +92,6 @@ export default function Form({
         } border flex-col justify-center gap-10 px-8 py-20 border-solid w-[70%] max-[1100px]:w-4/5 max-[920px]:w-[90%] max-[920px]:px-4 max-[920px]:py-12  max-[800px]:w-full max-[800px]:border-inherit max-[700px]:border-0 max-[700px]:pt-0`}
         id={idForm}
         action={dispatch}
-        // action={submitForm}
         aria-describedby="form-error"
       >
         <div className="name_email-box">
@@ -162,24 +176,34 @@ export default function Form({
           <div className="head">
             <span className="title">Votre fourchette budgétaire</span>
           </div>
-          <div className="min_max">
-            <DoubleSlider setSliderValues={setSlidersValues} />
-            <div>
-              <input
-                type="hidden"
-                value={slidersValues[0]}
-                name="minValuSlider"
-              />
-              <input
-                type="hidden"
-                value={slidersValues[1]}
-                name="maxValueSlider"
-              />
-            </div>
+          <div className="min_max flex py-8 flex-col gap-4 max-[800px]:gap-4">
+            <DoubleSlider
+              setSliderValues={setSlidersValues}
+              className={`${personalOpen ? "hidden" : ""}`}
+              sliderRef={sliderRef}
+            />
+            {!personalOpen && (
+              <div className={`${personalOpen ? "hidden" : ""}`}>
+                <input
+                  type="hidden"
+                  value={slidersValues[0]}
+                  name="minValuSlider"
+                />
+                <input
+                  type="hidden"
+                  value={slidersValues[1]}
+                  name="maxValueSlider"
+                />
+              </div>
+            )}
             <div>
               <button
                 type="button"
-                className="btn border-primary hover:bg-zinc-800"
+                className={`btn border-primary  ${
+                  personalOpen
+                    ? "bg-primary hover:bg-primary-foreground"
+                    : "hover:bg-zinc-800"
+                }`}
                 onClick={() => {
                   if (personalOpen) {
                     PersonalValueFalse();
@@ -205,6 +229,7 @@ export default function Form({
                   id="minValue"
                   placeholder="Saisissez ici"
                   defaultValue={`${slidersValues[0]}`}
+                  disabled={!personalOpen}
                 />
               </div>
               <div className="max-value">
@@ -217,6 +242,7 @@ export default function Form({
                   id="maxValue"
                   placeholder="Saisissez ici"
                   defaultValue={`${slidersValues[1]}`}
+                  disabled={!personalOpen}
                 />
               </div>
             </div>

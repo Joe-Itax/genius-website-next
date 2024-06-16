@@ -162,9 +162,8 @@ form .why_contacting_us .colab label,
 form .why_contacting_us .other label {
   @apply px-4 max-[500px]:px-2;
 }
-form .why_contacting_us .why,
-form .ur_budget .min_max {
-  @apply flex  py-8 flex-col gap-4 max-[800px]:gap-4 mt-8;
+form .why_contacting_us .why {
+  @apply flex py-8 flex-col gap-4 max-[800px]:gap-4 mt-8;
 }
 
 form .ur_budget .min_max .personal {

@@ -31,11 +31,15 @@ const marks = [
 
 export default function DoubleSlider({
   setSliderValues,
+  className,
+  sliderRef,
 }: {
   setSliderValues: any;
+  className?: string;
+  sliderRef?: any;
 }) {
   return (
-    <Stack spacing={1} direction="row" className="text-white w-[95%] m-auto">
+    <div className={`text-white w-[98%] m-auto ${className}`} ref={sliderRef}>
       <Slider
         getAriaLabel={() => "Range"}
         orientation="horizontal"
@@ -48,6 +52,6 @@ export default function DoubleSlider({
         className={`text-[#bc43f0]`}
         onChange={(e, newValue) => setSliderValues(newValue)}
       />
-    </Stack>
+    </div>
   );
 }

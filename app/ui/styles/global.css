@@ -43,7 +43,7 @@ html {
 
 @layer base {
   * {
-    @apply border-border transition-all duration-300 text-white;
+    @apply border-border transition-all duration-700 text-white;
   }
   html body {
     @apply bg-background;
@@ -173,7 +173,7 @@ main .our-services .content .service .container-service .paragraph p,
   transform: translate3d(0, -100%, 0);
 }
 header {
-  @apply flex justify-between items-center bg-[#191919] text-base w-full sticky z-[9999] transition-all top-0;
+  @apply flex justify-between items-center bg-[#191919] text-base w-full sticky z-[9999] top-0;
 }
 header .logo-box a {
   @apply flex items-center justify-center pl-0 p-8;

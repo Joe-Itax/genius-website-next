@@ -23,7 +23,7 @@ export default function NavMobile() {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild className={`min-[1000px]:hidden`}>
-        <div className="menu-icon-box cursor-pointer min-[1000px]:hidden z-50">
+        <div className="menu-icon-box cursor-pointer min-[1000px]:hidden z-50 p-2 bg-[#262626] rounded-md">
           <RiMenu4Line
             size={35}
             className="menu-icon rounded-lg icon-hamburger open-menu"
