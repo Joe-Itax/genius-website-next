@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import "@/app/ui/styles/services.css";
 import { servicesObject } from "@/app/ui/services/service";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Service innovants et expertise pour vous aider à réussir vos projets. Solutions personnalisées pour vos besoins en développement, marketing et communication.",
+};
 
 export default function Services() {
   return (

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Genius Development",
   },
   description:
-    "Agence web à Kinshasa, spécialisée en création de sites internet, applis web et solutions e-commerce. Transformez vos idées en réalité digitale avec un devis gratuit !",
+    "Agence web à Kinshasa, spécialisée en création de sites internet, applis web et solutions e-commerce. Transformez vos idées en réalité avec un devis gratuit!",
   keywords:
     "Genius, Genius Development, Genius services, Genius service, Genius DRC, Genius RDC, Geniusdrc, Geniusrdc, developeur, developeur web ,développement web, agence web, création de sites internet, applications web, solutions e-commerce, Kinshasa, RDC, agence de développement, services web, conception web, développement de logiciels, devis gratuit, web agency",
   robots: "index, follow",
