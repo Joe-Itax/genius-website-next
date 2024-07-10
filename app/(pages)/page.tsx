@@ -11,28 +11,30 @@ export default function Home() {
     <>
       {/* Main Content */}
       <main className="text-white">
-        {/* Hero Section */}
-        <HeroSection />
+        <div className="sub-main">
+          {/* Hero Section */}
+          <HeroSection />
 
-        {/* Trust on Us Section */}
-        {/* <section className={`section trust-on-us`}>
+          {/* Trust on Us Section */}
+          {/* <section className={`section trust-on-us`}>
   Ils nous font confiance
 </section> */}
 
-        {/* Our Service Section */}
-        <OurServicesSection />
+          {/* Our Service Section */}
+          <OurServicesSection />
 
-        {/* Why Choose Us Section */}
-        <WhyUsSection />
+          {/* Why Choose Us Section */}
+          <WhyUsSection />
 
-        {/* Testimonies Section */}
-        <TestimoniesSection />
+          {/* Testimonies Section */}
+          <TestimoniesSection />
 
-        {/* FAQs Section */}
-        <FaqSection />
+          {/* FAQs Section */}
+          <FaqSection />
 
-        {/* Start A Project Section */}
-        <StartAProjectSection />
+          {/* Start A Project Section */}
+          <StartAProjectSection />
+        </div>
       </main>
     </>
   );

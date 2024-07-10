@@ -36,9 +36,9 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body className={cn(barlow.className, barlow.variable, "bg-background")}>
-        <Header />
+        <Header className="max-w-[1500px]" />
         {children}
-        <Footer />
+        <Footer className="max-w-[1500px]" />
       </body>
     </html>
   );
