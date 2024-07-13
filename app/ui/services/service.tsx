@@ -18,12 +18,6 @@ import {
   UIIcon,
   UXIcon,
 } from "@/public/assets/icons/icons";
-import {
-  RiAlarmWarningFill,
-  RiCodeSSlashFill,
-  RiTerminalBoxFill,
-  RiTimeFill,
-} from "@remixicon/react";
 
 type ServiceItem = {
   title: string;
@@ -197,4 +191,3 @@ export const servicesObject: Service[] = [
     ],
   },
 ];
-// git
