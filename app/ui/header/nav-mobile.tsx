@@ -22,15 +22,15 @@ export default function NavMobile() {
   };
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild className={`min-[1000px]:hidden`}>
-        <div className="menu-icon-box cursor-pointer min-[1000px]:hidden z-50 p-2 bg-[#262626] rounded-md">
+      <SheetTrigger asChild className={`min-[1170px]:hidden`}>
+        <div className="menu-icon-box cursor-pointer min-[1170px]:hidden z-50 p-2 bg-[#262626] rounded-md">
           <RiMenu4Line
             size={35}
             className="menu-icon rounded-lg icon-hamburger open-menu"
           />
         </div>
       </SheetTrigger>
-      <SheetContent className="w-full min-[400px]:w-[400px] min-[1000px]:hidden">
+      <SheetContent className="w-full min-[400px]:w-[400px] min-[1170px]:hidden">
         <SheetHeader className="flex flex-row">
           <Link
             onClick={() => setOpenState()}
@@ -68,7 +68,7 @@ export default function NavMobile() {
                 href="/realisations"
                 className={clsx("", path === "/realisations" && "active")}
               >
-                Nos Réalisations
+                Réalisations
               </Link>
             </li>
             <li>

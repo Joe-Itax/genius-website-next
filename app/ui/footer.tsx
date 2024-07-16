@@ -5,11 +5,13 @@ import {
   RiLinkedinBoxFill,
   RiMailFill,
   RiWhatsappFill,
-  // ri-map-pin-fill
   RiMapPinFill,
 } from "@remixicon/react";
 
 export default function Footer({ className }: { className?: string }) {
+  const date = new Date();
+
+  const currentYear = date.getFullYear();
   return (
     <footer
       className={`px-2 py-0 md:px-4 lg:px-8 xl:px-16 bg-[#191919] text-gray-100 flex flex-col justify-center items-center text-[1.1rem] pb-8`}
@@ -121,7 +123,7 @@ export default function Footer({ className }: { className?: string }) {
           </div>
           <div className={`text-center pt-6 lg:pt-0`}>
             <span className={`text-[#98989A]`}>
-              © 2023 Genius. Tous droits réservés.
+              © {currentYear} Genius. Tous droits réservés.
             </span>
           </div>
         </div>

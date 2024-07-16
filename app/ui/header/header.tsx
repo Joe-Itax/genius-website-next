@@ -28,8 +28,8 @@ export default function Header({ className }: { className?: string }) {
           </Link>
         </div>
 
-        <NavDesktop className="hidden min-[1000px]:block" />
-        <div className="cta-contact_us hidden min-[1000px]:block">
+        <NavDesktop className="hidden min-[1170px]:block" />
+        <div className="cta-contact_us hidden min-[1170px]:block">
           <Link
             href="/contact"
             className="btn text-[#FEFEFE] border-2 border-solid bg-primary hover:bg-primary-foreground"

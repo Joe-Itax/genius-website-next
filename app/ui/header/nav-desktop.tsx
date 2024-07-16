@@ -26,7 +26,7 @@ export default function NavDesktop({ className }: { className?: string }) {
             href="/realisations"
             className={clsx("", path === "/realisations" && "active")}
           >
-            Nos Réalisations
+            Réalisations
           </Link>
         </li>
         <li>
