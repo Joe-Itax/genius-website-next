@@ -1,0 +1,11 @@
+main .first-contact-block {
+  @apply bg-[#262626] rounded-md w-full md:w-auto;
+}
+
+main .first-contact-block .link {
+  @apply flex justify-center items-center gap-2 cursor-pointer py-5 px-4 text-xl;
+}
+
+main .first-contact-block .link span {
+  @apply font-medium text-xl;
+}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { barlow } from "@/app/ui/fonts";
 import Header from "@/app/ui/header/header";
-import Footer from "@/app/ui/footer";
+import Footer from "@/app/ui/footer/footer";
 import "@/app/ui/styles/global.css";
 import "remixicon/fonts/remixicon.css";
 import { cn } from "@/app/lib/utils";

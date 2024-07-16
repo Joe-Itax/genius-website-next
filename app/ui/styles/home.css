@@ -104,24 +104,25 @@ main .faqs .contact-faq a {
 */
 /* Start Project Section */
 
-main .start_project .content {
+main .start_project .content,
+main .contact-form .content {
   @apply flex-col justify-center items-center flex px-8 py-0 max-[700px]:p-0 border-t-[solid] border-t;
 }
-main .start_project .content form .name_email-box {
+main .content form .name_email-box {
   @apply justify-between items-start gap-8 inline-flex max-[800px]:w-full max-[800px]:flex-col;
 }
-main .start_project .content form .name_email-box * {
+main .content form .name_email-box * {
   @apply w-full;
 }
-main .start_project .content form .name_email-box .name-input,
-main .start_project .content form .name_email-box .email-input,
-main .start_project .content form .why_contacting_us,
-main .start_project .content form .ur_budget,
-main .start_project .content form .message {
+main .content form .name_email-box .name-input,
+main .content form .name_email-box .email-input,
+main .content form .why_contacting_us,
+main .content form .ur_budget,
+main .content form .message {
   @apply flex-1 border px-4 py-[1.2rem] rounded-lg border-[solid] bg-[rgba(36,36,36,0.5)];
 }
-main .start_project .content form .name_email-box .name-input,
-main .start_project .content form .name_email-box .email-input {
+main .content form .name_email-box .name-input,
+main .content form .name_email-box .email-input {
   @apply flex-col justify-center items-start gap-5 inline-flex;
 }
 form label {

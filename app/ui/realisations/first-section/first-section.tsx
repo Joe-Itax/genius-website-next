@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function FirstSection() {
   return (
     <section className="first">
-      <div className="hero bg-[url('/assets/images/work-page/bg-hero-workspage.png')] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center px-4 py-24 text-center">
+      <div className="hero bg-[url('/assets/images/work-page/bg-hero-workspage.webp')] bg-no-repeat bg-center bg-cover flex flex-col justify-center items-center px-4 py-24 text-center">
         <h1>Nos Réalisations</h1>
         <p className="text-xl">
           Découvrez un portfolio de projets numériques visuellement
@@ -73,6 +73,8 @@ export default function FirstSection() {
                       href={work.urlOfSite}
                       target="_blank"
                       className="flex justify-center items-center h-full w-full p-3"
+                      aria-label={`Visiter le site ${work.nameOfSite}`}
+                      title={`Visiter le site ${work.nameOfSite}`}
                     >
                       <RiArrowRightUpLine color="#B97AE0" size={35} />
                     </Link>
