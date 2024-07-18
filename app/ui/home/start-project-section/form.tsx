@@ -89,7 +89,7 @@ export default function Form({
       <form
         className={`form ${className} ${
           formSuccess ? "hidden" : "flex"
-        } border flex-col justify-center gap-10 px-8 py-20 border-solid w-[70%] max-[1100px]:w-4/5 max-[920px]:w-[90%] max-[920px]:px-4 max-[920px]:py-12  max-[800px]:w-full max-[800px]:border-inherit max-[700px]:border-0 max-[700px]:pt-0`}
+        } border flex-col justify-center gap-10 px-8 py-20 border-solid w-[70%] max-[1100px]:w-4/5 max-[920px]:w-[90%] max-[920px]:px-4 max-[920px]:py-12  max-[800px]:w-full max-[800px]:border-inherit max-[700px]:border-0`}
         id={idForm}
         action={dispatch}
         aria-describedby="form-error"
