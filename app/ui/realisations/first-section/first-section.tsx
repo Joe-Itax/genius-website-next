@@ -2,7 +2,7 @@ import { ourWorks } from "@/app/ui/realisations/realisations";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import Image from "next/image";
 import Link from "next/link";
-import { IconCloudUsed } from "../../components/magicui/icon-cloud-used";
+import IconCloudUsed from "@/app/ui/components/magicui/icon-cloud-used";
 
 export default function FirstSection() {
   return (

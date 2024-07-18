@@ -10,54 +10,42 @@ type Work = {
 
 export const ourWorks: Work[] = [
   {
-    titleProject: `E-Commerce Platform for Fashion Hub`,
-    urlImgProject: `/assets/images/work-page/image-of-works/Sans-titre-10.webp`,
-    nameOfSite: `Chic Boutique`,
+    titleProject: `Plateforme E-Commerce pour Cabukaka`,
+    urlImgProject: `/assets/images/work-page/image-of-works/image-work-1.webp`,
+    nameOfSite: `Cabukaka Shop`,
     urlOfSite: `https://cabukaka.shop/`,
-    descriptionOfProject: `We developed a visually stunning and user-friendly e-commerce platform for Chic
-Boutique, a renowned fashion retailer. The platform featured seamless product
-browsing, secure payment integration, and personalized recommendations,
-resulting in increased online sales and customer satisfaction.`,
-    technologies: `React.js, Node.js, Express.js`,
-    dateRealisation: `2023-2024`,
+    descriptionOfProject: `Nous avons développé une plateforme e-commerce visuellement attrayante et facile à utiliser pour Cabukaka, un détaillant renommé de produits électroniques et électroménagers. La plateforme intègre une navigation fluide des produits, un système de gestion des stocks et un système de parrainage, ce qui a entraîné une augmentation des ventes en ligne et la satisfaction des clients.`,
+    technologies: `Wordpress, Elementor, WooCommerce`,
+    dateRealisation: `2024`,
   },
 
   {
-    titleProject: `Booking and Reservation System for Event Management`,
-    urlImgProject: `/assets/images/work-page/image-of-works/Sans-titre-10.webp`,
-    nameOfSite: `EventMasters`,
-    urlOfSite: `https://image-fffinder.vercel.app/`,
-    descriptionOfProject: `EventMasters required a comprehensive booking and reservation system for their
-event management services. We designed a user-friendly platform that allowed
-seamless event registration, ticketing, and attendee management, resulting in
-streamlined processes and enhanced customer experiences.`,
-    technologies: `React.js, Node.js, Express.js`,
-    dateRealisation: `2023-2024`,
+    titleProject: `Portail Web pour Etudiants Congolais`,
+    urlImgProject: `/assets/images/work-page/image-of-works/image-work-2.webp`,
+    nameOfSite: `Etudiant 2.0`,
+    urlOfSite: `https://etudiant2-0.vercel.app/`,
+    descriptionOfProject: `Etudiant 2.0 est une plateforme conçue pour rassembler les étudiants congolais, leur permettant de partager et de télécharger des documents pédagogiques variés tels que des livres, des notes de cours, des exercices, des TP et TD, etc. La plateforme prévoit également d'ajouter des fonctionnalités de chat direct, des forums universitaires, un système de mentorat, et bien plus encore.`,
+    technologies: `React.js, Express.js, Node.js`,
+    dateRealisation: `2024`,
   },
 
   {
-    titleProject: `Web Portal for Real Estate Listings`,
-    urlImgProject: `/assets/images/work-page/image-of-works/Sans-titre-10.webp`,
-    nameOfSite: `Dream Homes Realty`,
-    urlOfSite: `https://space-touriism.netlify.app/`,
-    descriptionOfProject: `Dream Homes Realty wanted an intuitive web portal for showcasing their property
-listings. We created a visually appealing platform with advanced search filters,
-virtual tours, and a user-friendly interface, enabling potential buyers to find their
-dream homes easily.`,
+    titleProject: `Site de Tourisme Spatial Fictif`,
+    urlImgProject: `/assets/images/work-page/image-of-works/image-work-3.webp`,
+    nameOfSite: `Space Tourism`,
+    urlOfSite: `https://space-touriiism.vercel.app/`,
+    descriptionOfProject: `Space Tourism était un défi publié sur le site Frontend Mentor. Nous avons développé un site fictif de tourisme spatial, avec une interface utilisateur captivante et des fonctionnalités interactives, permettant aux utilisateurs d'explorer des destinations spatiales imaginaires.`,
     technologies: `React.js, Node.js, Express.js`,
-    dateRealisation: `2023-2024`,
+    dateRealisation: `2023`,
   },
 
   {
-    titleProject: `Educational Platform for Online Learning`,
-    urlImgProject: `/assets/images/work-page/image-of-works/Sans-titre-10.webp`,
-    nameOfSite: `EduConnect`,
+    titleProject: `Générateur de Conseils`,
+    urlImgProject: `/assets/images/work-page/image-of-works/image-work-4.webp`,
+    nameOfSite: `Advice Generatory`,
     urlOfSite: `https://advice-generatory.vercel.app/`,
-    descriptionOfProject: `EduConnect sought an educational platform to facilitate online learning. We
-developed an interactive platform with virtual classrooms, multimedia content,
-and student progress tracking, providing a seamless and engaging learning
-experience for students of all ages.`,
-    technologies: `React.js, Node.js, Express.js, PostgreSQL`,
-    dateRealisation: `2023-2024`,
+    descriptionOfProject: `Advice Generatory est un site interactif qui génère des conseils éclairants pour vous guider à travers la vie. Laissez-vous surprendre par une nouvelle perspective à chaque visite et découvrez des conseils variés pour toutes les situations.`,
+    technologies: `React.js`,
+    dateRealisation: `2023`,
   },
 ];
