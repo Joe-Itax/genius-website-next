@@ -2,6 +2,7 @@ import { ourWorks } from "@/app/ui/realisations/realisations";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import Image from "next/image";
 import Link from "next/link";
+import { IconCloudUsed } from "../../components/magicui/icon-cloud-used";
 
 export default function FirstSection() {
   return (
@@ -25,6 +26,11 @@ export default function FirstSection() {
               conduisent au succès.
             </p>
           </div>
+
+          <div className="w-full flex justify-center items-center">
+            <IconCloudUsed />
+          </div>
+
           <div className="my-10 min-[500px]:w-max btn bg-[#262626]">
             <span>Les projets dont nous sommes fiers</span>
           </div>

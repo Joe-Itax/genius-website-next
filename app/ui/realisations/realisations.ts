@@ -11,7 +11,7 @@ type Work = {
 export const ourWorks: Work[] = [
   {
     titleProject: `E-Commerce Platform for Fashion Hub`,
-    urlImgProject: `/assets/images/work-page/image-of-works/Image.png`,
+    urlImgProject: `/assets/images/work-page/image-of-works/Sans-titre-10.webp`,
     nameOfSite: `Chic Boutique`,
     urlOfSite: `https://cabukaka.shop/`,
     descriptionOfProject: `We developed a visually stunning and user-friendly e-commerce platform for Chic
@@ -24,9 +24,9 @@ resulting in increased online sales and customer satisfaction.`,
 
   {
     titleProject: `Booking and Reservation System for Event Management`,
-    urlImgProject: `/assets/images/work-page/image-of-works/Image.png`,
+    urlImgProject: `/assets/images/work-page/image-of-works/Sans-titre-10.webp`,
     nameOfSite: `EventMasters`,
-    urlOfSite: `https://image-finder-itax.netlify.app/`,
+    urlOfSite: `https://image-fffinder.vercel.app/`,
     descriptionOfProject: `EventMasters required a comprehensive booking and reservation system for their
 event management services. We designed a user-friendly platform that allowed
 seamless event registration, ticketing, and attendee management, resulting in
@@ -37,7 +37,7 @@ streamlined processes and enhanced customer experiences.`,
 
   {
     titleProject: `Web Portal for Real Estate Listings`,
-    urlImgProject: `/assets/images/work-page/image-of-works/Image.png`,
+    urlImgProject: `/assets/images/work-page/image-of-works/Sans-titre-10.webp`,
     nameOfSite: `Dream Homes Realty`,
     urlOfSite: `https://space-touriism.netlify.app/`,
     descriptionOfProject: `Dream Homes Realty wanted an intuitive web portal for showcasing their property
@@ -50,9 +50,9 @@ dream homes easily.`,
 
   {
     titleProject: `Educational Platform for Online Learning`,
-    urlImgProject: `/assets/images/work-page/image-of-works/Image.png`,
+    urlImgProject: `/assets/images/work-page/image-of-works/Sans-titre-10.webp`,
     nameOfSite: `EduConnect`,
-    urlOfSite: `https://advice-generator-app-react-three.vercel.app/`,
+    urlOfSite: `https://advice-generatory.vercel.app/`,
     descriptionOfProject: `EduConnect sought an educational platform to facilitate online learning. We
 developed an interactive platform with virtual classrooms, multimedia content,
 and student progress tracking, providing a seamless and engaging learning
