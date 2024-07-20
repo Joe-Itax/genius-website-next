@@ -1,6 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { RiMailFill, RiMapPinFill, RiWhatsappFill } from "@remixicon/react";
 
 import Form from "@/app/ui/home/start-project-section/form";
 import FaqSection from "@/app/ui/home/faq-section/faq-section";
@@ -9,10 +7,10 @@ import StayConnected from "@/app/ui/footer/stay-connected";
 import "@/app/ui/styles/contact.css";
 import "@/app/ui/styles/home.css";
 import ConclusionSection from "@/app/ui/contact/conclusion-section";
+import OurContact from "@/app/ui/contact/our-contact";
 
 export const metadata: Metadata = {
   title: "Contact",
-  // description: ""
 };
 
 export default function Contact() {
@@ -28,51 +26,19 @@ export default function Contact() {
             </p>
           </div>
           {/* <\ /> */}
-          <div className="w-full border-b flex justify-center items-center py-10 px-4">
-            <div className="w-full md:w-full sm:w-1/2 flex flex-col md:flex-row justify-center items-center gap-4 min-[810px]:gap-8">
-              <div className="first-contact-block">
-                <Link
-                  href="mailto: interne.genius@gmail.com"
-                  target="_blank"
-                  className={`link`}
-                >
-                  <RiMailFill color="#B97AE0" />
-                  <span className="font-medium">interne.genius@gmail.com</span>
-                </Link>
-              </div>
-
-              <div className="first-contact-block">
-                <Link
-                  href="https://wa.me/243977873421"
-                  target="_blank"
-                  className={`link`}
-                >
-                  <RiWhatsappFill color="#B97AE0" />
-                  <span>+243 977 873 421</span>
-                </Link>
-              </div>
-
-              <div className="first-contact-block">
-                <div className="link">
-                  <RiMapPinFill color="#B97AE0" />
-                  <span>Kinshasa-RDC</span>
-                </div>
-              </div>
-            </div>
-          </div>
+          <OurContact />
           <section className="contact-form">
             <div className="content">
               <Form idForm="contact-page" />
             </div>
           </section>
-
           <div className="border-t">
             <div className="flex flex-col md:flex-row">
               <div className="w-full md:w-1/2 flex justify-center items-center md:border-r border-b md:border-b-0 py-8 px-4 text-2xl">
                 <span className="font-medium ">
                   Jours d&apos;ouverture: &nbsp;
                 </span>
-                <span className="bg-[#262626] py-5 px-4 rounded-md">
+                <span className="dark:bg-[#262626] bg-[#dfdfdf] py-5 px-4 rounded-md">
                   <span className=""> Lundi - Samedi</span>
                 </span>
               </div>
@@ -82,9 +48,7 @@ export default function Contact() {
               </div>
             </div>
           </div>
-
           <FaqSection />
-
           <ConclusionSection />
         </div>
       </main>

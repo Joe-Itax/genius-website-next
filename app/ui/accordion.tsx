@@ -28,10 +28,10 @@ export default function AccordionsFaq({
 
   return (
     <>
-      <div className={`num-faq`}>
+      <div className={`num-faq stay-connected-bg-icon-box transition-all`}>
         <span
           className={`${
-            expanded === "panel1" ? "text-[#B97AE0]" : "text-white"
+            expanded === "panel1" ? "text-[#B97AE0]" : "text-textColor"
           } `}
         >
           {numFaq}
@@ -52,7 +52,7 @@ export default function AccordionsFaq({
           expandIcon={
             <ExpandMore
               className={`${
-                expanded === "panel1" ? "text-[#B97AE0]" : "text-white"
+                expanded === "panel1" ? "text-[#B97AE0]" : "text-textColor"
               } text-3xl`}
             />
           }
@@ -70,7 +70,9 @@ export default function AccordionsFaq({
           >
             <span
               className={`${barlow.className} ${
-                expanded === "panel1" ? "text-[#ca8af1]" : "text-white"
+                expanded === "panel1"
+                  ? "text-[#B97AE0] dark:text-[#ca8af1]"
+                  : "text-textColor"
               } text-[1.4rem] max-[800px]:text-xl`}
             >
               {question}
@@ -78,7 +80,7 @@ export default function AccordionsFaq({
           </Box>
         </AccordionSummary>
         <AccordionDetails>
-          <div className={`${barlow.className}`}>
+          <div className={`${barlow.className} text-textColor`}>
             <span>{response}</span>
           </div>
         </AccordionDetails>

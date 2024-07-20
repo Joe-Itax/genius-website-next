@@ -1,9 +1,11 @@
+"use client";
 import {
   RiMedalFill,
   RiShieldFlashFill,
   RiUserVoiceFill,
   RiVipCrownFill,
 } from "@remixicon/react";
+import { motion } from "framer-motion";
 
 export default function WhyUsSection() {
   return (
@@ -19,10 +21,21 @@ export default function WhyUsSection() {
         </div>
       </div>
       <div className="content">
-        <div className="container first">
+        <motion.div
+          className="container first"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            delay: 0.4,
+            easeInOut: "linear",
+            duration: 3,
+          }}
+        >
           <div className="container-why">
             <div className="icon-and-title">
-              <div className="service-icon">
+              <div className="service-icon stay-connected-bg-icon-box">
                 <RiMedalFill className="icon" />
               </div>
               <h3>Expertise</h3>
@@ -38,7 +51,7 @@ export default function WhyUsSection() {
           </div>
           <div className="container-why">
             <div className="icon-and-title">
-              <div className="service-icon">
+              <div className="service-icon stay-connected-bg-icon-box">
                 <RiUserVoiceFill className="icon" />
               </div>
               <h3>Personnalisation</h3>
@@ -51,11 +64,22 @@ export default function WhyUsSection() {
               </p>
             </div>
           </div>
-        </div>
-        <div className="container second">
+        </motion.div>
+        <motion.div
+          className="container second"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            delay: 0.4,
+            easeInOut: "linear",
+            duration: 3,
+          }}
+        >
           <div className="container-why">
             <div className="icon-and-title">
-              <div className="service-icon">
+              <div className="service-icon stay-connected-bg-icon-box">
                 <RiShieldFlashFill className="icon" />
               </div>
               <h3>Support</h3>
@@ -70,7 +94,7 @@ export default function WhyUsSection() {
           </div>
           <div className="container-why">
             <div className="icon-and-title">
-              <div className="service-icon">
+              <div className="service-icon stay-connected-bg-icon-box">
                 <RiVipCrownFill className="icon" />
               </div>
               <h3>Rentabilité</h3>
@@ -83,7 +107,7 @@ export default function WhyUsSection() {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import { motion } from "framer-motion";
 
 export default function OurServicesSection() {
   return (
@@ -16,11 +17,22 @@ export default function OurServicesSection() {
           </p>
         </div>
       </div>
-      <div className="content grid items-start grid-cols-[repeat(3,1fr)] max-[800px]:grid-cols-[repeat(1,1fr)]">
+      <motion.div
+        className="content grid items-start grid-cols-[repeat(3,1fr)] max-[800px]:grid-cols-[repeat(1,1fr)]"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          type: "spring",
+          delay: 0.4,
+          easeInOut: "linear",
+          duration: 3,
+        }}
+      >
         <div className="service service1">
           <div className="container-service">
             <div className="icon-and-title">
-              <div className="service-icon">
+              <div className="service-icon stay-connected-bg-icon-box">
                 <Image
                   src="assets/icons/Union.svg"
                   alt="Icon"
@@ -53,7 +65,7 @@ export default function OurServicesSection() {
         <div className="service service2">
           <div className="container-service">
             <div className="icon-and-title">
-              <div className="service-icon">
+              <div className="service-icon stay-connected-bg-icon-box">
                 <Image
                   src="/assets/icons/Subtract.svg"
                   alt="Icon"
@@ -86,7 +98,7 @@ export default function OurServicesSection() {
         <div className="service service3">
           <div className="container-service">
             <div className="icon-and-title">
-              <div className="service-icon">
+              <div className="service-icon stay-connected-bg-icon-box">
                 <Image
                   src="/assets/icons/Vector.svg"
                   alt="Icon"
@@ -116,7 +128,7 @@ export default function OurServicesSection() {
             </Link>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

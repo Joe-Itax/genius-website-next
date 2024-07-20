@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       {/* Main Content */}
-      <main className="text-white">
+      <main className="text-textColor">
         <div className="sub-main">
           {/* Hero Section */}
           <HeroSection />

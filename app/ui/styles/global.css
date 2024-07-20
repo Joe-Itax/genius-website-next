@@ -4,7 +4,7 @@
 
 html {
   scroll-behavior: smooth;
-  @apply flex justify-center;
+  @apply flex justify-center transition-all duration-500;
 }
 /* body[data-scroll-locked] {
   margin-right: 0 !important;
@@ -45,14 +45,51 @@ html {
 
     --text-color: 0, 0%, 100%;
   }
+
+  .light {
+    --background: 0, 0%, 95%;
+    --foreground: 0, 0%, 10%;
+
+    --card: 0, 0%, 100%;
+    --card-foreground: 0, 0%, 10%;
+
+    --popover: 0, 0%, 100%;
+    --popover-foreground: 0, 0%, 10%;
+
+    --primary: 282, 79%, 49%;
+    --primary-foreground: 282, 70%, 63%;
+
+    --secondary: 60, 4.8%, 20%;
+    --secondary-foreground: 24, 9.8%, 90%;
+
+    --muted: 60, 4.8%, 20%;
+    --muted-foreground: 25, 5.3%, 55%;
+
+    --accent: 60, 4.8%, 20%;
+    --accent-foreground: 24, 9.8%, 90%;
+
+    --destructive: 0, 84.2%, 60.2%;
+    --destructive-foreground: 0, 0%, 10%;
+
+    --border: 0, 0%, 80%;
+    --input: 0, 0%, 90%;
+    --ring: 24.6, 100%, 50%;
+    --radius: 0.5rem;
+
+    --text-color: 0, 0%, 10%;
+  }
 }
 
 @layer base {
   * {
-    @apply border-border transition-all duration-700 text-white;
+    @apply border-border text-inherit;
+    transition-duration: none !important;
   }
-  html body {
-    @apply bg-background w-full;
+  html.dark body {
+    @apply bg-background w-full text-textColor;
+  }
+  html.light body {
+    @apply bg-background w-full text-textColor;
   }
 
   h1 {
@@ -96,13 +133,13 @@ html {
 
   header,
   main {
-    @apply border-b border-solid border-border;
+    @apply border-b /*border-solid border-border*/;
   }
 
   header,
   main,
   footer {
-    @apply py-0 px-2 min-[500px]:px-4 min-[960px]:px-8 min-[1050px]:px-6 min-[1100px]:px-6 min-[1170px]:px-16;
+    @apply py-0 px-2 min-[500px]:px-4 min-[960px]:px-8 min-[1050px]:px-6 min-[1100px]:px-6 min-[1170px]:px-16 transition-all duration-500;
   }
 
   main {
@@ -112,6 +149,10 @@ html {
   main .sub-main {
     @apply w-full max-w-[1500px];
   }
+}
+
+.stay-connected-bg-icon-box {
+  @apply bg-gradient-to-b dark:from-[#242424] from-[#dbdbdb] from-0% dark:to-[rgba(36,36,36,0)] to-[rgba(219,219,219,0)] to-100%;
 }
 
 /*
@@ -133,7 +174,7 @@ html {
 .testimonies,
 .faqs,
 .start_project {
-  @apply border-x-border border-l border-solid border-r;
+  @apply border-x;
 }
 .our-services,
 .why-us,
@@ -148,6 +189,10 @@ main .testimonies .heading,
 main .faqs .heading,
 main .start_project .heading {
   @apply flex flex-col justify-center items-center gap-4 px-40 py-28 max-[900px]:px-20 max-[800px]:px-[0.8rem];
+}
+main .heading,
+main .hero {
+  @apply text-white;
 }
 main .our-services .heading h2,
 main .why-us .heading h2,
@@ -165,7 +210,7 @@ main .start_project .heading p {
 }
 main .our-services .content .service .container-service .paragraph p,
 .why-us .content .container .container-why .paragraph p {
-  @apply text-[#E6E6E6] text-[1.1rem];
+  @apply text-textColor text-[1.1rem];
 }
 /* Fin style générale pour toutes les sections */
 
@@ -186,16 +231,16 @@ main .our-services .content .service .container-service .paragraph p,
   transform: translate3d(0, -100%, 0);
 }
 header {
-  @apply flex justify-between items-center bg-[#191919] text-base w-full sticky z-[9999] top-0;
+  @apply flex justify-between items-center bg-background text-base w-full sticky z-[9999] top-0;
 }
 header .logo-box a {
   @apply flex items-center justify-center pl-0 p-8;
 }
 header nav ul li a {
-  @apply font-semibold border transition-all px-4 py-2 rounded-lg border-solid border-transparent hover:text-primary text-[1.2rem] max-[1200px]:px-[0.7rem] max-[1200px]:py-[0.3rem];
+  @apply font-semibold border transition-all duration-500 px-4 py-2 rounded-lg border-solid border-transparent hover:text-primary text-[1.2rem] max-[1200px]:px-[0.7rem] max-[1200px]:py-[0.3rem];
 }
 header nav ul li a.active {
-  @apply bg-neutral-700 hover:text-inherit;
+  @apply dark:bg-neutral-700 bg-neutral-600 hover:text-gray-100 text-gray-100;
 }
 
 /****************  Navbar Mobile  ****************/
@@ -203,8 +248,8 @@ nav.nav-mobile ul li {
   @apply border-b border-border last:border-b-inherit last:border-b-0;
 }
 nav.nav-mobile ul li a {
-  @apply block text-xl font-bold w-full pl-5 py-4 hover:bg-violet-800;
+  @apply block text-xl font-bold w-full pl-5 py-4 hover:bg-violet-800 hover:text-white transition-all duration-500;
 }
 nav.nav-mobile ul li a.active {
-  @apply bg-violet-800;
+  @apply bg-violet-800 text-white;
 }

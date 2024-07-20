@@ -4,6 +4,7 @@ import DoubleSlider from "@/app/ui/double-slider";
 import { submitForm } from "@/app/lib/actions";
 import { MutableRefObject, useEffect, useRef, useState } from "react";
 import FormStatus from "./form-status";
+import { motion } from "framer-motion";
 
 export default function Form({
   className,
@@ -81,18 +82,27 @@ export default function Form({
     }
   }, [state]);
 
-  console.log("state: ", state);
+  // console.log("state: ", state);
 
   return (
     <>
       <FormStatus formSuccess={formSuccess} formError={formError} />
-      <form
+      <motion.form
         className={`form ${className} ${
           formSuccess ? "hidden" : "flex"
         } border flex-col justify-center gap-10 px-8 py-20 border-solid w-[70%] max-[1100px]:w-4/5 max-[920px]:w-[90%] max-[920px]:px-4 max-[920px]:py-12  max-[800px]:w-full max-[800px]:border-inherit max-[700px]:border-0`}
         id={idForm}
         action={dispatch}
         aria-describedby="form-error"
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          type: "spring",
+          delay: 0.3,
+          easeInOut: "linear",
+          duration: 2,
+        }}
       >
         <div className="name_email-box">
           <div className="name-input">
@@ -201,8 +211,8 @@ export default function Form({
                 type="button"
                 className={`btn border-primary  ${
                   personalOpen
-                    ? "bg-primary hover:bg-primary-foreground"
-                    : "hover:bg-zinc-800"
+                    ? "bg-primary text-white hover:bg-primary-foreground"
+                    : "dark:hover:bg-zinc-800 hover:bg-zinc-100"
                 }`}
                 onClick={() => {
                   if (personalOpen) {
@@ -279,7 +289,7 @@ export default function Form({
             id="btnSubmit"
           />
         </div>
-      </form>
+      </motion.form>
     </>
   );
 }

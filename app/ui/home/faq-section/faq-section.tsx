@@ -1,6 +1,8 @@
-import React from "react";
+"use client";
+
 import AccordionsFaq from "@/app/ui/accordion";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type Faq = {
   id: string;
@@ -123,7 +125,18 @@ export default function FaqSection() {
         </div>
       </div>
       <div className="content grid grid-cols-[repeat(2,1fr)] max-[800px]:grid-cols-[1fr]">
-        <div className="faq-container">
+        <motion.div
+          className="faq-container"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            delay: 0.4,
+            easeInOut: "linear",
+            duration: 3,
+          }}
+        >
           {faqs1.map((faq) => (
             <>
               <div className={`faq faq-${faq.id}`} key={faq.id}>
@@ -135,9 +148,20 @@ export default function FaqSection() {
               </div>
             </>
           ))}
-        </div>
+        </motion.div>
 
-        <div className="faq-container">
+        <motion.div
+          className="faq-container"
+          initial={{ opacity: 0, y: -100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{
+            type: "spring",
+            delay: 0.4,
+            easeInOut: "linear",
+            duration: 3,
+          }}
+        >
           {faqs2.map((faq) => (
             <>
               <div className={`faq faq-${faq.id}`} key={faq.id}>
@@ -149,7 +173,7 @@ export default function FaqSection() {
               </div>
             </>
           ))}
-        </div>
+        </motion.div>
       </div>
       <div className="contact-faq">
         <Link

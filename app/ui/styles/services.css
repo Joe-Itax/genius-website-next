@@ -3,7 +3,7 @@
 }
 
 .services-page .main-container {
-  @apply border-x border-border;
+  @apply border-x;
 }
 
 .services-page .main-container .head,
@@ -12,7 +12,7 @@
 }
 
 .services-page .main-container .head .description-of-service {
-  @apply text-[#E6E6E6] w-4/5 max-[450px]:w-full;
+  @apply text-textColor w-4/5 max-[450px]:w-full;
 }
 
 .services-page .main-container .content {
@@ -24,7 +24,7 @@
 }
 
 .services-page .main-container .content .block- .title-service {
-  @apply text-zinc-400 py-8 text-center md:text-left border-t border-border px-10 max-[450px]:px-4;
+  @apply dark:text-zinc-400 text-zinc-800 py-8 text-center md:text-left border-t border-border px-10 max-[450px]:px-4;
 }
 
 .services-page .main-container .content .block- .content-expanded {
@@ -47,7 +47,7 @@
   .content-expanded
   .content-expanded-content
   .icon-box {
-  @apply border border-solid border-[#2E2E2E] border-b-0 rounded-lg lg:w-16 w-14 lg:h-16 h-14 flex justify-center items-center;
+  @apply border dark:border-[#2E2E2E] border-[#d2d2d2] border-b-0 rounded-lg lg:w-16 w-14 lg:h-16 h-14 flex justify-center items-center;
 
   background: linear-gradient(
     131deg,
@@ -64,5 +64,24 @@
   .content-expanded-content
   .icon-box
   .icon {
-  @apply fill-violet-400 lg:w-6 lg:h-6;
+  /* @apply fill-violet-50 lg:w-6 lg:h-6; */
+}
+.services-page
+  .main-container
+  .content
+  .block-
+  .content-expanded
+  .content-expanded-content
+  .icon-box
+  .icon,
+.services-page
+  .main-container
+  .content
+  .block-
+  .content-expanded
+  .content-expanded-content
+  .icon-box
+  .icon
+  path {
+  @apply fill-primary;
 }

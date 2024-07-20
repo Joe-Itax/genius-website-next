@@ -8,7 +8,7 @@
 */
 /* Our Services Section*/
 main .our-services .content .service {
-  @apply grid grid-rows-[repeat(2,1fr)] h-[33rem] pb-4 p-8 items-end max-[1100px]:h-[34rem] max-[950px]:h-[35rem] max-[950px]:p-4 max-[800px]:h-auto border-r-border border-r border-solid last:border-0 max-[800px]:border-r-0 max-[800px]:border-b-border max-[800px]:border-b max-[800px]:last:border-b-0 max-[800px]:flex max-[800px]:flex-col max-[800px]:gap-4;
+  @apply grid grid-rows-[repeat(2,1fr)] h-[33rem] pb-4 p-8 items-end max-[1100px]:h-[34rem] max-[950px]:h-[35rem] max-[950px]:p-4 max-[800px]:h-auto border-r border-solid last:border-0 max-[800px]:border-r-0 max-[800px]:border-b-border max-[800px]:border-b max-[800px]:last:border-b-0 max-[800px]:flex max-[800px]:flex-col max-[800px]:gap-4;
 }
 main .our-services .content .service .container-service {
   @apply justify-self-start flex flex-col items-start gap-4;
@@ -19,8 +19,8 @@ main .our-services .content .service .container-service .icon-and-title {
 }
 
 main .our-services .content .service .container-service .service-icon {
-  @apply border p-[0.8rem] rounded-lg border-b-[none] border-[solid];
-  background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
+  @apply border p-[0.8rem] rounded-lg border-b-0 w-16 h-16 flex justify-center items-center;
+  /* background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%); */
 }
 main .our-services .content .service .container-service .service-icon img {
   @apply w-10;
@@ -29,7 +29,7 @@ main .our-services .content .service .button {
   @apply inline-flex justify-center items-center w-full;
 }
 main .our-services .content .service .button a {
-  @apply border border-border hover:border-[rgba(121,22,163,1)] text-white w-full text-center bg-background;
+  @apply border border-border hover:border-[rgba(121,22,163,1)] text-textColor w-full text-center bg-background;
 }
 
 /*
@@ -47,7 +47,7 @@ main .why-us .content .container .container-why {
 }
 .why-us .content .container .container-why .icon-and-title .service-icon {
   @apply border p-[0.8rem] rounded-lg border-b-[none] border-[solid];
-  background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
+  /* background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%); */
 }
 .why-us .content .container .container-why .icon-and-title .service-icon .icon {
   @apply text-[2.5rem] text-primary;
@@ -64,11 +64,16 @@ main .why-us .content .container .container-why {
 */
 /* FAQ section*/
 main .faqs .content .faq-container {
-  @apply flex flex-col items-start border-r-[#292929] border-r border-solid last:border-r-0 max-[800px]:items-center max-[800px]:border-inherit max-[800px]:border-0 max-[800px]:border-b max-[800px]:last:border-0;
+  @apply flex flex-col items-start border-r last:border-r-0 max-[800px]:items-center max-[800px]:border-inherit max-[800px]:border-0 max-[800px]:border-b max-[800px]:last:border-0;
+}
+
+main .faqs .content .faq-container .MuiPaper-root.MuiPaper-elevation::before {
+  height: 0 !important;
+  top: 0 !important;
 }
 
 main .faqs .content .faq-container .faq {
-  @apply flex items-start justify-between gap-8 px-8 py-12 max-[925px]:px-4 max-[925px]:py-10 max-[800px]:px-4 max-[800px]:py-8 max-[640px]:px-2 max-[640px]:py-8 max-[925px]:gap-6  w-full border-b-border border-b border-solid last:border-b-0 max-[800px]:w-full max-[800px]:gap-4 max-[800px]:justify-start max-[800px]:border-b-border;
+  @apply flex items-start justify-between gap-8 px-8 py-12 max-[925px]:px-4 max-[925px]:py-10 max-[800px]:px-4 max-[800px]:py-8 max-[640px]:px-2 max-[640px]:py-8 max-[925px]:gap-6  w-full border-b last:border-b-0 max-[800px]:w-full max-[800px]:gap-4 max-[800px]:justify-start;
 }
 main
   .faqs
@@ -85,18 +90,18 @@ main .faqs .content .faq-container .faq .accordion-custom-class {
   margin: 0 !important;
 }
 main .faqs .content .faq-container .faq .num-faq {
-  @apply border px-[0.5rem] py-[0.3rem] rounded-lg border-b-[none] border-[solid];
-  background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%);
+  @apply border px-[0.5rem] py-[0.3rem] rounded-lg border-b-0;
+  /* background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0) 100%); */
 }
 main .faqs .content .faq-container .faq .num-faq span {
-  @apply text-[1.8rem] font-medium transition-all max-[640px]:text-xl;
+  @apply text-[1.8rem] font-medium transition-all duration-500 max-[640px]:text-xl;
 }
 
 main .faqs .contact-faq {
   @apply flex justify-center pb-6;
 }
 main .faqs .contact-faq a {
-  @apply transition-all bg-primary hover:bg-transparent hover:border-primary;
+  @apply transition-all duration-500 bg-primary hover:bg-transparent  text-white hover:text-black dark:hover:text-textColor hover:border-primary;
 }
 
 /*
@@ -106,7 +111,7 @@ main .faqs .contact-faq a {
 
 main .start_project .content,
 main .contact-form .content {
-  @apply flex-col justify-center items-center flex px-8 py-0 max-[700px]:p-0 border-t-[solid] border-t;
+  @apply flex-col justify-center items-center flex px-8 py-0 max-[700px]:p-0;
 }
 main .content form .name_email-box {
   @apply justify-between items-start gap-8 inline-flex max-[800px]:w-full max-[800px]:flex-col;
@@ -119,26 +124,30 @@ main .content form .name_email-box .email-input,
 main .content form .why_contacting_us,
 main .content form .ur_budget,
 main .content form .message {
-  @apply flex-1 border px-4 py-[1.2rem] rounded-lg border-[solid] bg-[rgba(36,36,36,0.5)];
+  @apply flex-1 border px-4 py-[1.2rem] rounded-lg dark:bg-[rgba(36,36,36,0.5)] bg-[rgba(219,219,219,0.5)];
 }
 main .content form .name_email-box .name-input,
 main .content form .name_email-box .email-input {
   @apply flex-col justify-center items-start gap-5 inline-flex;
 }
-form label {
-  @apply text-white text-[22px] font-medium leading-[33px];
+form label:not(form .why_contacting_us label),
+form .title {
+  @apply text-textColor font-medium leading-[33px] text-2xl;
   word-wrap: break-word;
+}
+form .why_contacting_us {
+  @apply text-xl;
 }
 form input[type="text"],
 form input[type="email"],
 form textarea {
-  @apply text-white text-[22px] w-full resize-y px-[0.3rem] py-[0.8rem] border-b-[#292929] border-[none] border-b border-solid focus:border-b-primary;
+  @apply text-textColor text-[22px] w-full resize-y px-[0.3rem] py-[0.8rem] border-0 border-b focus:border-b-primary;
   background: none;
   outline: none;
 }
-form .title:not(label.title) {
-  @apply text-2xl font-semibold text-white;
-}
+/* form .title:not(label.title) {
+  @apply text-2xl font-semibold text-textColor;
+} */
 form input::placeholder,
 form textarea::placeholder {
   @apply text-[#656567] text-lg font-normal leading-[27px];
@@ -181,13 +190,13 @@ form .ur_budget .min_max .personal.closed {
 }
 
 form .ur_budget .min_max .MuiSlider-markLabel {
-  @apply text-white;
+  @apply text-textColor;
 }
 form .ur_budget .min_max .MuiSlider-thumb.MuiSlider-thumbSizeMedium {
-  @apply border-[#4C4C4D] border-[5px] border-solid w-6 h-6 text-primary;
+  @apply dark:border-[#4C4C4D] border-[#6f6f6f] border-[5px] w-6 h-6 text-primary;
 }
 form .ur_budget .min_max .MuiSlider-rail {
-  @apply bg-[#333333] h-[.4rem];
+  @apply dark:bg-[#333333] bg-[#aaa] h-[.4rem];
 }
 form .ur_budget .min_max .MuiSlider-track {
   @apply h-[.4rem] text-primary;
@@ -195,16 +204,17 @@ form .ur_budget .min_max .MuiSlider-track {
 
 /* Style général des checkbox */
 input[type="checkbox"] {
-  @apply relative w-7 h-7 rounded border appearance-none p-1 border-[solid] checked:before:content-["\EB7B"] checked:before:absolute checked:before:-translate-x-2/4 checked:before:-translate-y-2/4 checked:before:text-primary checked:before:left-2/4 checked:before:top-2/4 bg-[#262626];
+  @apply relative w-7 h-7 rounded border appearance-none p-1 checked:before:absolute checked:before:-translate-x-2/4 checked:before:-translate-y-2/4 checked:before:text-primary checked:before:left-2/4 checked:before:top-2/4 bg-background;
 }
 input[type="checkbox"]:checked::before {
   /* Code Unicode de l'icône check-line de remixicon */
   font-family: "RemixIcon";
   content: "\EB7A";
+  font-size: 1.5rem;
 }
 form .submit {
   @apply w-full self-center flex items-center justify-center;
 }
 form input[type="submit"] {
-  @apply w-6/12 transition-all hover:border-primary disabled:cursor-not-allowed disabled:hover:border disabled:hover:border-[rgba(126,26,222,0.3)] disabled:hover:border-solid bg-primary hover:bg-primary-foreground disabled:bg-[rgba(126,26,222,.3)] max-[600px]:w-full;
+  @apply w-6/12 transition-all duration-500 hover:border-primary text-gray-100 font-bold disabled:cursor-not-allowed disabled:hover:border disabled:hover:border-[rgba(126,26,222,0.3)] disabled:hover:border-solid bg-primary hover:bg-primary-foreground disabled:bg-[rgba(126,26,222,.3)] max-[600px]:w-full;
 }

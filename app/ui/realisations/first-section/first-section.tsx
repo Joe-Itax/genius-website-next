@@ -1,8 +1,11 @@
+"use client";
+
 import { ourWorks } from "@/app/ui/realisations/realisations";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import Image from "next/image";
 import Link from "next/link";
 import IconCloudUsed from "@/app/ui/components/magicui/icon-cloud-used";
+import { motion } from "framer-motion";
 
 export default function FirstSection() {
   return (
@@ -18,7 +21,7 @@ export default function FirstSection() {
 
       <div className="main-container">
         <div className="head pt-10 px-10 max-[450px]:px-4">
-          <h2>A Genius</h2>
+          <h2>Chez Genius</h2>
           <div>
             <p className="description-of-service">
               Nous avons eu le privilège de travailler avec un large éventail de
@@ -31,19 +34,28 @@ export default function FirstSection() {
             <IconCloudUsed />
           </div>
 
-          <div className="my-10 min-[500px]:w-max btn bg-[#262626]">
+          <div className="my-10 min-[500px]:w-max btn dark:bg-[#262626] bg-[#dfdfdf]">
             <span>Les projets dont nous sommes fiers</span>
           </div>
         </div>
 
         <div className="flex lg:flex-wrap flex-col lg:flex-row w-full">
           {ourWorks.map((work, i) => (
-            <div
+            <motion.div
               key={`${i}-${work.nameOfSite}`}
               className="lg:w-1/2 w-full border-t border-r flex flex-col"
+              initial={{ opacity: 0, y: 70 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{
+                type: "spring",
+                delay: 0.4,
+                easeInOut: "linear",
+                duration: 3,
+              }}
             >
               <div className="border-b w-full h-36 px-10 max-[450px]:px-4 flex items-center">
-                <span className="font-bold text-[#98989A] text-2xl">
+                <span className="font-bold dark:text-[#98989A] text-[#525250] text-2xl">
                   {work.titleProject}
                 </span>
               </div>
@@ -64,17 +76,17 @@ export default function FirstSection() {
                 </div>
 
                 <div className="flex justify-between items-center py-4 gap-8">
-                  <div className="bg-[#262626] rounded-md">
+                  <div className="dark:bg-[#262626] bg-[#dfdfdf] rounded-md">
                     <Link
                       href={work.urlOfSite}
                       target="_blank"
-                      className="text-[#98989A] w-full block px-2 py-4"
+                      className="dark:text-[#98989A] text-[#525250] w-full block px-2 py-4"
                     >
                       {work.urlOfSite}
                     </Link>
                   </div>
 
-                  <div className="bg-[#262626] rounded-md w-14 h-14 flex justify-center items-center">
+                  <div className="dark:bg-[#262626] bg-[#dfdfdf] rounded-md w-14 h-14 flex justify-center items-center">
                     <Link
                       href={work.urlOfSite}
                       target="_blank"
@@ -82,33 +94,30 @@ export default function FirstSection() {
                       aria-label={`Visiter le site ${work.nameOfSite}`}
                       title={`Visiter le site ${work.nameOfSite}`}
                     >
-                      <RiArrowRightUpLine color="#B97AE0" size={35} />
+                      <RiArrowRightUpLine className="fill-primary" size={35} />
                     </Link>
                   </div>
                 </div>
               </div>
 
               <div className="px-10 max-[450px]:px-4 py-8">
-                <p className="text-[#98989A]">{work.descriptionOfProject}</p>
+                <p className="dark:text-[#98989A] text-[#525250]">
+                  {work.descriptionOfProject}
+                </p>
               </div>
 
-              <div className="px-10 max-[450px]:px-4 pb-8">
+              <div className="px-10 max-[450px]:px-4 pb-8 dark:text-[#d8d8d8] text-[#494949]">
                 <p>
-                  <span className="text-[#d8d8d8]font-bold">Technologies:</span>
-                  <span className="text-[#d8d8d8]"> {work.technologies}</span>
+                  <span className="font-bold">Technologies:</span>
+                  <span className=""> {work.technologies}</span>
                 </p>
 
                 <p>
-                  <span className="text-[#d8d8d8]font-bold">
-                    Date de réalisation:
-                  </span>
-                  <span className="text-[#d8d8d8]">
-                    {" "}
-                    {work.dateRealisation}
-                  </span>
+                  <span className="font-bold">Date de réalisation:</span>
+                  <span className=""> {work.dateRealisation}</span>
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,5 +1,5 @@
 main .first-contact-block {
-  @apply bg-[#262626] rounded-md w-full md:w-auto;
+  @apply dark:bg-[#262626] bg-[#dfdfdf] rounded-md w-full min-[950px]:w-auto;
 }
 
 main .first-contact-block .link {

@@ -25,7 +25,7 @@ const slugs = [
 
 export default function IconCloudUsed() {
   return (
-    <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg bg-background px-0 md:px-10 py-8 ">
+    <div className="relative flex h-full w-full max-w-[32rem] items-center justify-center overflow-hidden rounded-lg bg-inherit px-0 md:px-10 py-8 ">
       <IconCloud iconSlugs={slugs} />
     </div>
   );

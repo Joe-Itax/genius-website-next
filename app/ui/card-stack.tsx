@@ -45,7 +45,7 @@ export const CardStack = ({
         return (
           <motion.div
             key={card.id}
-            className="absolute bg-[#292929] text-gray-200 h-60 w-60 md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-border shadow-black/[0.1] flex flex-col justify-between"
+            className="absolute bg-background text-textColor h-60 w-60 md:h-60 md:w-96 rounded-3xl p-4 shadow-xl border border-border shadow-black/[0.1] flex flex-col justify-between"
             style={{
               transformOrigin: "top center",
             }}
@@ -54,11 +54,24 @@ export const CardStack = ({
               scale: 1 - index * SCALE_FACTOR, // decrease scale for cards that are behind
               zIndex: cards.length - index, //  decrease z-index for the cards that are behind
             }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{
+              type: "spring",
+              delay: 0.4,
+              easeInOut: "linear",
+              duration: 3,
+            }}
           >
-            <div className="font-normal text-neutral-200">{card.content}</div>
+            <div className="font-normal dark:text-neutral-200 text-neutral-700">
+              {card.content}
+            </div>
             <div>
-              <p className="font-medium text-white">{card.name}</p>
-              <p className="font-normal text-neutral-200">{card.designation}</p>
+              <p className="font-medium text-textColor">{card.name}</p>
+              <p className="font-normal dark:text-neutral-200 text-neutral-700">
+                {card.designation}
+              </p>
             </div>
           </motion.div>
         );

@@ -13,6 +13,7 @@ import { RiAtLine, RiMenu4Line } from "@remixicon/react";
 import clsx from "clsx";
 import Link from "next/link";
 import { useState } from "react";
+import ThemeSwitcher from "@/app/ui/components/ThemeSwitcher";
 
 export default function NavMobile() {
   const path = usePathname();
@@ -22,15 +23,15 @@ export default function NavMobile() {
   };
   return (
     <Sheet open={open} onOpenChange={setOpen}>
-      <SheetTrigger asChild className={`min-[1170px]:hidden`}>
-        <div className="menu-icon-box cursor-pointer min-[1170px]:hidden z-50 p-2 bg-[#262626] rounded-md">
+      <SheetTrigger asChild className={`min-[1240px]:hidden`}>
+        <div className="menu-icon-box cursor-pointer min-[1240px]:hidden z-50 p-2 dark:bg-[#262626] bg-[#dcdcdc] abcdef rounded-md">
           <RiMenu4Line
             size={35}
             className="menu-icon rounded-lg icon-hamburger open-menu"
           />
         </div>
       </SheetTrigger>
-      <SheetContent className="w-full min-[400px]:w-[400px] min-[1170px]:hidden">
+      <SheetContent className="w-full min-[400px]:w-[400px] min-[1240px]:hidden flex flex-col last:justify-end">
         <SheetHeader className="flex flex-row">
           <Link
             onClick={() => setOpenState()}
@@ -91,6 +92,9 @@ export default function NavMobile() {
             </li>
           </ul>
         </nav>
+        <SheetFooter className="w-full h-full flex items-end">
+          <ThemeSwitcher />
+        </SheetFooter>
       </SheetContent>
     </Sheet>
   );

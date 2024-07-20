@@ -5,6 +5,7 @@ import Footer from "@/app/ui/footer/footer";
 import "@/app/ui/styles/global.css";
 import "remixicon/fonts/remixicon.css";
 import { cn } from "@/app/lib/utils";
+import MyThemeProvider from "@/app/ui/components/ThemeProvider";
 
 export const metadata: Metadata = {
   authors: [
@@ -36,9 +37,11 @@ export default function RootLayout({
   return (
     <html lang="fr" suppressHydrationWarning>
       <body className={cn(barlow.className, barlow.variable, "bg-background")}>
-        <Header className="max-w-[1500px]" />
-        {children}
-        <Footer className="max-w-[1500px]" />
+        <MyThemeProvider>
+          <Header className="max-w-[1500px]" />
+          {children}
+          <Footer className="max-w-[1500px]" />
+        </MyThemeProvider>
       </body>
     </html>
   );

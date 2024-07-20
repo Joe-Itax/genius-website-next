@@ -1,5 +1,5 @@
 "use client";
-import { RiAtLine, RiMenu4Line } from "@remixicon/react";
+import { RiAtLine } from "@remixicon/react";
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -7,6 +7,7 @@ import { onScrollUpdate } from "../../lib/utils";
 import { useEffect } from "react";
 import NavMobile from "./nav-mobile";
 import NavDesktop from "./nav-desktop";
+import ThemeSwitcher from "@/app/ui/components/ThemeSwitcher";
 
 export default function Header({ className }: { className?: string }) {
   useEffect(() => {
@@ -15,7 +16,7 @@ export default function Header({ className }: { className?: string }) {
 
   return (
     <header
-      className={`flex justify-center items-center w-full bg-[#191919] text-gray-100 z-30 text-base border-b border-solid border-[#262626]`}
+      className={`flex justify-center items-center w-full bg-background text-text z-30 text-base border-b`}
     >
       <div className={`${className} w-full flex justify-between items-center`}>
         <div className="logo-box">
@@ -28,14 +29,17 @@ export default function Header({ className }: { className?: string }) {
           </Link>
         </div>
 
-        <NavDesktop className="hidden min-[1170px]:block" />
-        <div className="cta-contact_us hidden min-[1170px]:block">
-          <Link
-            href="/contact"
-            className="btn text-[#FEFEFE] border-2 border-solid bg-primary hover:bg-primary-foreground"
-          >
-            Nous Contacter
-          </Link>
+        <NavDesktop className="hidden min-[1240px]:block" />
+        <div className="cta-contact_us hidden min-[1240px]:flex justify-center items-center gap-2">
+          <div>
+            <Link
+              href="/contact"
+              className="btn text-[#FEFEFE] border-2 bg-primary hover:bg-primary-foreground"
+            >
+              Nous Contacter
+            </Link>
+          </div>
+          <ThemeSwitcher />
         </div>
 
         <NavMobile />

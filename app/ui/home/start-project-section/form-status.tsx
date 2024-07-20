@@ -11,7 +11,7 @@ export default function FormStatus({
     <div className={`w-full`}>
       <div id="status-form"></div>
       <div
-        className={`form-send text-center px-4 min-[700px]:px-0 pb-14  max-[700px]:pb-0 pt-28 w-full ${
+        className={`form-send text-center px-4 min-[700px]:px-0 pb-14  max-[700px]:pb-0 pt-28 w-full text-white ${
           formSuccess || formError ? "block" : "hidden"
         }`}
       >

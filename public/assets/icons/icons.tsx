@@ -6,6 +6,7 @@ export function CodeSSlashIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 40 40"
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -25,6 +26,7 @@ export function TerminalBoxIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 41 40"
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -44,7 +46,7 @@ export function CMSIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 41 40"
-      //   className={`${className}`}
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -68,6 +70,7 @@ export function AnalisysIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 40 40"
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -93,6 +96,7 @@ export function TaskAssignmentIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 41 40"
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -110,6 +114,7 @@ export function TimeLineDevIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 41 40"
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -126,6 +131,7 @@ export function UXIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 40 40"
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -143,6 +149,7 @@ export function UIIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 40 40"
+      className={`${className}`}
     >
       <g clip-path="url(#a)">
         <path
@@ -166,6 +173,7 @@ export function ProtoAndWirefIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 40 40"
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -182,6 +190,7 @@ export function SprintsIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 40 40"
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -204,6 +213,7 @@ export function ScrumIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 41 40"
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -233,6 +243,7 @@ export function FeedbackIntegationIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 41 40"
+      className={`${className}`}
     >
       <g clip-path="url(#a)">
         <path
@@ -257,6 +268,7 @@ export function TestPlanificationIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 40 40"
+      className={`${className}`}
     >
       <g clip-path="url(#a)">
         <path
@@ -280,6 +292,7 @@ export function SecurityTestIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 41 40"
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -296,6 +309,7 @@ export function IssueResoulutionIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 41 40"
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -312,6 +326,7 @@ export function Assistance_24_7_Icon({ className }: { className?: string }) {
       width="40"
       height="40"
       fill="#B97AE0"
+      className={`${className}`}
     >
       <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM13 12V7H11V14H17V12H13Z"></path>
     </svg>
@@ -326,6 +341,7 @@ export function ProblemSolvingIcon({ className }: { className?: string }) {
       height="40"
       fill="none"
       viewBox="0 0 41 40"
+      className={`${className}`}
     >
       <path
         fill="#B97AE0"
@@ -342,6 +358,7 @@ export function RegularUpdateIcon({ className }: { className?: string }) {
       width="40"
       height="40"
       fill="#B97AE0"
+      className={`${className}`}
     >
       <path d="M12 4C14.5905 4 16.8939 5.23053 18.3573 7.14274L16 9.5H22V3.5L19.7814 5.71863C17.9494 3.452 15.1444 2 12 2 6.47715 2 2 6.47715 2 12H4C4 7.58172 7.58172 4 12 4ZM20 12C20 16.4183 16.4183 20 12 20 9.40951 20 7.10605 18.7695 5.64274 16.8573L8 14.5 2 14.5V20.5L4.21863 18.2814C6.05062 20.548 8.85557 22 12 22 17.5228 22 22 17.5228 22 12H20Z"></path>
     </svg>
