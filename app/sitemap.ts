@@ -11,8 +11,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://genius-service.vercel.app/services",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: "https://genius-service.vercel.app/realisations",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://genius-service.vercel.app/about",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.6,
+    },
+    {
+      url: "https://genius-service.vercel.app/contact",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
     },
     // {
     //   url: "https://acme.com/blog",
