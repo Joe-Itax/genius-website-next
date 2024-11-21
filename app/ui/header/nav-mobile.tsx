@@ -14,6 +14,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { useState } from "react";
 import ThemeSwitcher from "@/app/ui/components/ThemeSwitcher";
+import Image from "next/image";
 
 export default function NavMobile() {
   const path = usePathname();
@@ -38,8 +39,12 @@ export default function NavMobile() {
             href="/"
             className={`flex justify-center items-center`}
           >
-            <RiAtLine size={40} />
-            <span className="text-[2rem] font-bold">Genius</span>
+            <Image
+              src={"/assets/images/logo1.png"}
+              width={50}
+              height={50}
+              alt="Logo"
+            />
           </Link>
         </SheetHeader>
         <SheetClose></SheetClose>

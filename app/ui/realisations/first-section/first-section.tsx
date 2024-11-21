@@ -21,7 +21,7 @@ export default function FirstSection() {
 
       <div className="main-container">
         <div className="head pt-10 px-10 max-[450px]:px-4">
-          <h2>Chez Genius</h2>
+          <h2>Chez CarmelCode</h2>
           <div>
             <p className="description-of-service">
               Nous avons eu le privilège de travailler avec un large éventail de

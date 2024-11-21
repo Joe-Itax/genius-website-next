@@ -3,31 +3,31 @@ import { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://genius-service.vercel.app/",
+      url: "https://carmelcode.vercel.app/",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
-      url: "https://genius-service.vercel.app/services",
+      url: "https://carmelcode.vercel.app/services",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://genius-service.vercel.app/realisations",
+      url: "https://carmelcode.vercel.app/realisations",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://genius-service.vercel.app/about",
+      url: "https://carmelcode.vercel.app/about",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.6,
     },
     {
-      url: "https://genius-service.vercel.app/contact",
+      url: "https://carmelcode.vercel.app/contact",
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,

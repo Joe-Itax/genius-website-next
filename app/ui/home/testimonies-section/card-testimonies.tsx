@@ -35,7 +35,7 @@ const CARDS = [
     designation: "CEO of Itax Corporation",
     content: (
       <p>
-        Genius <Highlight>a joué un rôle déterminant</Highlight> dans la
+        CarmelCode <Highlight>a joué un rôle déterminant</Highlight> dans la
         transformation de notre présence en ligne. 🙏
       </p>
     ),
@@ -46,7 +46,7 @@ const CARDS = [
     designation: "CEO of Chic Boutique",
     content: (
       <p>
-        <Highlight>Travailler avec Genius</Highlight> a été un{" "}
+        <Highlight>Travailler avec CarmelCode</Highlight> a été un{" "}
         <Highlight>jeu d&apos;enfant</Highlight>.
       </p>
     ),
@@ -57,7 +57,7 @@ const CARDS = [
     designation: "CEO of Cabukaka",
     content: (
       <p>
-        <Highlight>Genius</Highlight> est une{" "}
+        <Highlight>CarmelCode</Highlight> est une{" "}
         <Highlight>agence de développement</Highlight>
       </p>
     ),

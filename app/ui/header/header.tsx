@@ -1,13 +1,11 @@
 "use client";
-import { RiAtLine } from "@remixicon/react";
-import clsx from "clsx";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { onScrollUpdate } from "../../lib/utils";
 import { useEffect } from "react";
 import NavMobile from "./nav-mobile";
 import NavDesktop from "./nav-desktop";
 import ThemeSwitcher from "@/app/ui/components/ThemeSwitcher";
+import Image from "next/image";
 
 export default function Header({ className }: { className?: string }) {
   useEffect(() => {
@@ -24,8 +22,12 @@ export default function Header({ className }: { className?: string }) {
             href="/"
             className={`flex justify-center items-center p-8 pl-0`}
           >
-            <RiAtLine size={40} />
-            <span className="text-4xl font-bold">Genius</span>
+            <Image
+              src={"/assets/images/logo1.png"}
+              width={50}
+              height={50}
+              alt="Logo"
+            />
           </Link>
         </div>
 

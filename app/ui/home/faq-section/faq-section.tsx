@@ -13,10 +13,10 @@ type Faq = {
 const faqs1: Faq[] = [
   {
     id: "01",
-    question: "Quels sont les avantages de Genius ?",
+    question: "Quels sont les avantages de CarmelCode ?",
     response: (
       <>
-        <p>Les avantages de Genius incluent:</p>
+        <p>Les avantages de CarmelCode incluent:</p>
         <ul className="list-disc list-inside">
           <li>Expertise professionnelle</li>
           <li>Solutions personnalisées</li>
@@ -91,7 +91,7 @@ const faqs2: Faq[] = [
   },
   {
     id: "07",
-    question: "Comment puis-je commencer un projet avec Genius ?",
+    question: "Comment puis-je commencer un projet avec CarmelCode ?",
     response: (
       <p>
         Pour commencer un projet, vous pouvez nous contacter via notre
@@ -177,7 +177,7 @@ export default function FaqSection() {
       </div>
       <div className="contact-faq">
         <Link
-          href="mailto:interne.genius@gmail.com?subject=Question%20supplémentaire%20|%20FAQs%20Genius"
+          href="mailto:carmelcode1@gmail.com?subject=Question%20supplémentaire%20|%20FAQs%20CarmelCode"
           className="btn"
           target="_blank"
         >

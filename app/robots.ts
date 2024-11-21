@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://genius-service.vercel.app/sitemap.xml",
+    sitemap: "https://carmelcode.vercel.app/sitemap.xml",
   };
 }

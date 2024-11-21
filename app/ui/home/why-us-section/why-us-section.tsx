@@ -11,7 +11,7 @@ export default function WhyUsSection() {
   return (
     <section className={`section why-us`}>
       <div className="heading bg-[url('/assets/images/home-page/bg-why-us.webp')] bg-no-repeat bg-center bg-cover">
-        <h2>Pourquoi Choisir Genius?</h2>
+        <h2>Pourquoi Choisir CarmelCode?</h2>
         <div>
           <p>
             Faites l’expérience de l’excellence dans l’artisanat numérique avec

@@ -29,11 +29,11 @@ export default function StayConnected() {
           className="w-12 h-12 flex justify-center items-center"
         >
           <Link
-            href="https://facebook.com/joseph-itakala.102"
+            href="https://facebook.com/CarmelCode"
             target="_blank"
             className={`border border-b-0 rounded-lg p-3 stay-connected-bg-icon-box`}
-            aria-label="Profile Facebook de Joseph Itakala"
-            title="Profile Facebook de Joseph Itakala"
+            aria-label="Profile Facebook de Carmel Code"
+            title="Profile Facebook de Carmel Code"
           >
             <RiFacebookCircleFill />
           </Link>

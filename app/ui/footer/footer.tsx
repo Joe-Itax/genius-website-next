@@ -1,15 +1,10 @@
-// "use client";
 import Link from "next/link";
 import { RiMailFill, RiWhatsappFill, RiMapPinFill } from "@remixicon/react";
 import StayConnected from "@/app/ui/footer/stay-connected";
-import ThemeSwitcher from "@/app/ui/components/ThemeSwitcher";
+import Image from "next/image";
 
 export default function Footer({ className }: { className?: string }) {
   const date = new Date();
-
-  // const theme = localStorage.getItem("theme");
-
-  // console.log("theme footer: ", theme);
 
   const currentYear = date.getFullYear();
   return (
@@ -21,8 +16,12 @@ export default function Footer({ className }: { className?: string }) {
           <div
             className={`flex justify-center items-center py-8 px-0 gap-1  text-inherit`}
           >
-            <span className="text-3xl font-bold pb-2 text-inherit">@</span>
-            <span className={`text-2xl font-bold text-inherit`}>Genius</span>
+            <Image
+              src={"/assets/images/logo1.png"}
+              width={100}
+              height={100}
+              alt="Logo"
+            />
           </div>
           <nav
             className={`w-full sm:w-auto flex flex-col lg:flex-row flex-wrap items-center justify-between font-medium border-t lg:border-t-0 pt-8 lg:pt-0 gap-8 lg:gap-0`}
@@ -67,12 +66,12 @@ export default function Footer({ className }: { className?: string }) {
             className={`flex justify-center gap-3 flex-col sm:flex-row w-full sm:w-auto`}
           >
             <Link
-              href="mailto: interne.genius@gmail.com"
+              href="mailto:carmelcode1@gmail.com"
               target="_blank"
               className={`pb-6 sm:pb-3 pt-3 flex justify-center items-center border-b gap-1 cursor-pointer text-inherit`}
             >
               <RiMailFill className="fill-inherit dark:fill-white" />
-              <span className="text-inherit ">interne.genius@gmail.com</span>
+              <span className="text-inherit ">carmelcode1@gmail.com</span>
             </Link>
             <Link
               href="https://wa.me/243977873421"
@@ -91,7 +90,8 @@ export default function Footer({ className }: { className?: string }) {
           </div>
           <div className={`text-center pt-6 lg:pt-0`}>
             <span className={`text-[#5f5e5e] dark:text-[#98989A]`}>
-              © {currentYear} Genius. Tous droits réservés.
+              © {currentYear} <strong>Carmel Code</strong>. Tous droits
+              réservés.
             </span>
           </div>
         </div>

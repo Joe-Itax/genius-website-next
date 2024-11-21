@@ -4,6 +4,7 @@ import { RiAtLine } from "@remixicon/react";
 import Link from "next/link";
 import ButtonStartProject from "@/app/ui/home/start-project-section/button-start-project";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function SecondSection() {
   return (
@@ -22,9 +23,12 @@ export default function SecondSection() {
       <div className="heading bg-[url('/assets/images/home-page/bg-contact.webp')] bg-no-repeat bg-center bg-cover">
         <div className="flex flex-col items-center gap-8 text-center px-6 py-16">
           <div className="logo-box">
-            <span className="logo flex items-center justify-center gap-[5px]">
-              <RiAtLine size={80} />
-            </span>
+            <Image
+              src={"/assets/images/logo1.png"}
+              width={180}
+              height={180}
+              alt="Logo"
+            />
           </div>
           <div>
             <h3 className="font-bold pb-4">

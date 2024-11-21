@@ -3,6 +3,7 @@
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function ConclusionSection() {
   return (
@@ -20,12 +21,17 @@ export default function ConclusionSection() {
         }}
       >
         <div className="first-part flex flex-col md:flex-row justify-center items-center gap-4">
-          <div className="bg-primary rounded-full pb-5 px-5">
-            <span className="text-9xl text-white">@</span>
+          <div className="bg-background border rounded-full p-1">
+            <Image
+              src={"/assets/images/logo1.png"}
+              width={180}
+              height={180}
+              alt="Logo"
+            />
           </div>
           <div className="dark:text-[#98989A] text-[#525250] flex flex-col gap-4">
             <p className="text-3xl dark:text-[#98989A] text-[#525250] text-center md:text-left">
-              Aujourd&apos;hui, Genius continue de prospérer en tant
+              Aujourd&apos;hui, CarmelCode continue de prospérer en tant
               qu&apos;agence leader de produits numériques...
             </p>
 
@@ -42,7 +48,7 @@ export default function ConclusionSection() {
         <div className="second-part dark:bg-[rgba(36,36,36,0.2)] bg-[rgba(219,219,219,0.2)] rounded-xl px-4 py-6 border backdrop-blur-md flex flex-col md:flex-row items-center justify-center gap-5">
           <div>
             <span className="text-xl dark:text-[#98989A] text-[#3f3f3e]">
-              Bienvenue chez Genius
+              Bienvenue chez CarmelCode
             </span>
           </div>
 

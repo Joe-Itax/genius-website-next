@@ -21,12 +21,12 @@ export default function OurContact() {
       <div className="w-full min-[950px]:w-full md:w-1/2 sm:w-2/3 flex flex-col min-[950px]:flex-row justify-center items-center gap-4 min-[810px]:gap-8">
         <div className="first-contact-block">
           <Link
-            href="mailto: interne.genius@gmail.com"
+            href="mailto:carmelcode1@gmail.com"
             target="_blank"
             className={`link`}
           >
             <RiMailFill className="fill-primary" />
-            <span className="font-medium">interne.genius@gmail.com</span>
+            <span className="font-medium">carmelcode1@gmail.com</span>
           </Link>
         </div>
 
