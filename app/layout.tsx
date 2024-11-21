@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   description:
     "Agence web à Kinshasa, spécialisée en création de sites internet, applis web et solutions e-commerce. Transformez vos idées en réalité avec un devis gratuit!",
   keywords:
-    "CarmelCode, carmelcode, carmel code RDC, Carmel Code, Genius, Genius Development, Genius services, Genius service, Genius DRC, Genius RDC, Geniusdrc, Geniusrdc, developeur, developeur web ,développement web, agence web, création de sites internet, applications web, solutions e-commerce, Kinshasa, RDC, agence de développement, services web, conception web, développement de logiciels, devis gratuit, web agency",
+    "CarmelCode, carmelcode, carmel code RDC, Joseph Itakala, Itakala, Itax, Joe Itax, Carmel Itax, Carmel development, Carmel dev, Joseph Itax, Itax Dev, Itax Code, Carmel Code, Genius, Genius Development, Genius services, Genius service, Genius DRC, Genius RDC, Geniusdrc, Geniusrdc, developeur, developeur web ,développement web, agence web, création de sites internet, applications web, solutions e-commerce, Kinshasa, RDC, agence de développement, services web, conception web, développement de logiciels, devis gratuit, web agency",
   robots: "index, follow",
 };
 
