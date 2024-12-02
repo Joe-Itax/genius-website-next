@@ -6,7 +6,9 @@ export default function HeroSection() {
       className={`hero-section bg-[url('/assets/images/home-page/bg-hero-section.svg')] bg-no-repeat bg-center bg-cover h-screen flex flex-col justify-center items-center gap-8 mb-8 border-b max-[800px]:px-4 max-[600px]:h-auto max-[600px]:px-4 max-[600px]:py-36`}
     >
       <h1 className="hero-title text-white text-center">
-        Ici, le Génie est au Service de vos Ambitions Numériques
+        {/* Ici, le Génie est au Service de vos Ambitions Numériques */}
+        {/* Nous Réalisons Vos Ambitions Numériques avec Passion et Expertise */}
+        Transformez Vos Idées en Réalité Digitale avec CarmelCode
       </h1>
       <div className="for-startup_and_more border border-[#434344] dark:border-border backdrop-blur-md px-8 py-4 rounded-xl bg-[rgba(36,36,36,0.2)]">
         <p

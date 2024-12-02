@@ -93,6 +93,10 @@ export default function Footer({ className }: { className?: string }) {
               © {currentYear} <strong>Carmel Code</strong>. Tous droits
               réservés.
             </span>
+            {/* <span className={`text-[#5f5e5e] dark:text-[#98989A]`}>
+              Made with heart_icon by <strong>Carmel Code</strong> | Tous droits
+              réservés | © {currentYear}{" "}
+            </span> */}
           </div>
         </div>
       </div>

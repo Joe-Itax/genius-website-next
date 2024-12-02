@@ -27,7 +27,7 @@ export default function Home() {
           <WhyUsSection />
 
           {/* Testimonies Section */}
-          <TestimoniesSection />
+          <TestimoniesSection className="hidden" />
 
           {/* FAQs Section */}
           <FaqSection />
