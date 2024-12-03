@@ -166,7 +166,8 @@ export default function Form({
                   id="dev_mob_and_desk"
                 />
                 <label htmlFor="dev_mob_and_desk">
-                  Développement Mobile ou Desktop
+                  {/* Développement Mobile ou Desktop */}
+                  Refonte / Optimisation des performances / Amélioration SEO
                 </label>
               </div>
             </div>
