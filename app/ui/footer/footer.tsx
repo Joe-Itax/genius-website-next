@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import { RiMailFill, RiWhatsappFill, RiMapPinFill } from "@remixicon/react";
 import StayConnected from "@/app/ui/footer/stay-connected";

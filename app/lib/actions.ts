@@ -17,16 +17,6 @@ const FormSchema = z.object({
     .min(10, { message: "Votre message doit contenir au moins 10 caractères" }),
 });
 
-export type State = {
-  errors?: {
-    name?: string[];
-    email?: string[];
-    message?: string[];
-  };
-  message?: string | null;
-};
-// prevState: State,
-
 export async function submitForm(prevState: any, formData: FormData) {
   const data = Object.fromEntries(formData);
   console.log("data: ", data);
@@ -38,7 +28,6 @@ export async function submitForm(prevState: any, formData: FormData) {
     dev_web: data.dev_web,
   });
 
-  // If form validation fails, return errors early. Otherwise, continue.
   if (!validatedFields.success) {
     return {
       errors: validatedFields.error.flatten().fieldErrors,

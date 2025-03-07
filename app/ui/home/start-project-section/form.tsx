@@ -13,7 +13,6 @@ export default function Form({
   className?: string;
   idForm: string;
 }) {
-  const initialState = { message: null, errors: {} };
   const [state, dispatch] = useFormState(submitForm, null);
   const [slidersValues, setSlidersValues] = useState<number[]>([500, 1000]);
   const [personalOpen, setPersonalOpen] = useState<boolean>(false);
